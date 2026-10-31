@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://abdullahrentacar.com/sitemap.xml
+Sitemap: https://abdullharentacar.eu.cc/sitemap.xml
 
 # LLM / AI Search Crawlers
 User-agent: GPTBot
