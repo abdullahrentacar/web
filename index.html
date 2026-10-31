@@ -272,12 +272,136 @@
     .bigbtn strong{display:block;font:600 1.02rem/1 var(--f);letter-spacing:.02em;font-variant-numeric:tabular-nums}
     .bigbtn .go{margin-left:auto;opacity:.75}
 
-    .intro{display:grid;gap:10px;justify-items:center;text-align:center;margin-top:clamp(26px,4vw,40px)}
-    .hero h1{font:700 clamp(1.6rem,3.2vw,2.3rem)/1.2 var(--f);letter-spacing:-.01em}
-    .hero .lede{font-size:1.05rem}
-    .gmb-pill{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:9px 16px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.9rem}
-    .gmb-pill:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
-    .gmb-pill .ic{width:18px;height:18px;color:var(--amber-ink)}
+    /* intro card redesign */
+    .intro-card {
+      max-width: 860px;
+      margin: clamp(28px, 4vw, 44px) auto 0;
+      padding: clamp(24px, 4vw, 36px) clamp(20px, 3.5vw, 36px);
+      background: var(--surface);
+      border-radius: 24px;
+      box-shadow: 0 1px 2px rgba(11,22,38,0.04), 0 20px 40px -15px rgba(11,22,38,0.07);
+      border: 1px solid var(--line);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--amber) 0%, #FF9900 100%);
+    }
+    .intro-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(19, 138, 72, 0.08);
+      color: var(--wa);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--wa);
+      box-shadow: 0 0 0 0 rgba(19, 138, 72, 0.6);
+      animation: livePulse 1.8s infinite;
+    }
+    @keyframes livePulse {
+      0% { box-shadow: 0 0 0 0 rgba(19, 138, 72, 0.6); }
+      70% { box-shadow: 0 0 0 8px rgba(19, 138, 72, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(19, 138, 72, 0); }
+    }
+    .intro-card__title {
+      font: 700 clamp(1.75rem, 3.4vw, 2.45rem) / 1.15 var(--f);
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .intro-card__title .accent-text {
+      color: var(--amber-ink);
+      background: linear-gradient(135deg, var(--ink) 0%, var(--amber-ink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .intro-card__sub {
+      color: var(--ink-2);
+      font-size: clamp(0.96rem, 1.8vw, 1.08rem);
+      line-height: 1.6;
+      max-width: 62ch;
+      margin: 0;
+    }
+    .intro-card__features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 4px;
+      width: 100%;
+    }
+    .feat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .feat-pill .ic {
+      width: 16px;
+      height: 16px;
+      color: var(--amber-ink);
+    }
+    .intro-card__footer {
+      margin-top: 6px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .gmb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(11,22,38,0.04);
+    }
+    .gmb-btn:hover {
+      border-color: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(11,22,38,0.08);
+    }
+    .gmb-btn .ic {
+      width: 17px;
+      height: 17px;
+      color: var(--amber-ink);
+    }
+    .gmb-btn .go {
+      color: var(--ink-2);
+      margin-left: 2px;
+    }
 
     /* services */
     .svc{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -465,11 +589,42 @@
         </div>
       </div>
     </div>
-    <div class="intro">
-      <h1>Rent a car in Rajshahi</h1>
-      <p class="lede">Safe ride. Comfort journey. Sedan, SUV and Noah microbus for rent in Rajshahi, open 24/7.</p>
-      <p class="bn" lang="bn">রাজশাহীতে গাড়ি ভাড়া · নিরাপদ ভ্রমণ ও নির্ভরযোগ্য সার্ভিস · ২৪ ঘণ্টা খোলা</p>
-      <a class="gmb-pill" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Find us on Google Maps</a>
+    <div class="intro-card">
+      <div class="intro-card__badge">
+        <span class="pulse-dot"></span>
+        <span>সার্বক্ষণিক ২৪/৭ সার্ভিস চালু আছে · Open 24/7</span>
+      </div>
+
+      <h1 class="intro-card__title">
+        Rent a Car in <span class="accent-text">Rajshahi</span>
+      </h1>
+      
+      <p class="intro-card__sub bn">
+        রাজশাহীতে সাশ্রয়ী ও প্রিমিয়াম কার রেন্টাল সার্ভিস — সেডান, এসইউভি ও নোয়াহ মাইক্রোবাস। যেকোনো পারিবারিক ভ্রমণ, বিয়ে বা অফিসের প্রয়োজনে সম্পূর্ণ নিরাপদ ভ্রমণ।
+      </p>
+
+      <div class="intro-card__features">
+        <div class="feat-pill">
+          <svg class="ic"><use href="#i-shield"/></svg>
+          <span>অভিজ্ঞ চালক ও নিরাপদ রাইড</span>
+        </div>
+        <div class="feat-pill">
+          <svg class="ic"><use href="#i-route"/></svg>
+          <span>রাজশাহী থেকে ঢাকা ও যেকোনো জেলা</span>
+        </div>
+        <div class="feat-pill">
+          <svg class="ic"><use href="#i-award"/></svg>
+          <span>ন্যায্য রেট ও কোনো হিডেন চার্জ নেই</span>
+        </div>
+      </div>
+
+      <div class="intro-card__footer">
+        <a class="gmb-btn" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-pin"/></svg>
+          <span><strong>শালবাগান, সোপুরা, রাজশাহী</strong> · Google Maps-এ আমাদের অবস্থান</span>
+          <svg class="ic go"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
