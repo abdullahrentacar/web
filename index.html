@@ -272,135 +272,369 @@
     .bigbtn strong{display:block;font:600 1.02rem/1 var(--f);letter-spacing:.02em;font-variant-numeric:tabular-nums}
     .bigbtn .go{margin-left:auto;opacity:.75}
 
-    /* intro card redesign */
-    .intro-card {
-      max-width: 860px;
-      margin: clamp(28px, 4vw, 44px) auto 0;
-      padding: clamp(24px, 4vw, 36px) clamp(20px, 3.5vw, 36px);
-      background: var(--surface);
-      border-radius: 24px;
-      box-shadow: 0 1px 2px rgba(11,22,38,0.04), 0 20px 40px -15px rgba(11,22,38,0.07);
-      border: 1px solid var(--line);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
+    /* Smart Booking & Fare Inquiry Console */
+    .smart-console {
+      max-width: 960px;
+      margin: clamp(24px, 4vw, 42px) auto 0;
+      padding: clamp(22px, 3.5vw, 36px);
+      background: linear-gradient(165deg, #0e192a 0%, #080f1a 100%);
+      border-radius: 28px;
+      color: #fff;
+      box-shadow: 0 24px 60px -20px rgba(11,22,38,0.35), 0 0 0 1px rgba(255,255,255,0.08);
       position: relative;
       overflow: hidden;
+      border-top: 4px solid var(--amber);
     }
-    .intro-card::before {
+    .smart-console::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--amber) 0%, #FF9900 100%);
+      top: -120px;
+      right: -100px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(255,184,0,0.15) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .intro-card__badge {
+    .smart-console::after {
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: -80px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(19,138,72,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .console__top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .console__status {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(19, 138, 72, 0.08);
-      color: var(--wa);
-      font-size: 0.85rem;
+      background: rgba(19,138,72,0.22);
+      border: 1px solid rgba(19,138,72,0.4);
+      color: #4ade80;
+      font-size: 0.84rem;
       font-weight: 600;
-      letter-spacing: 0.02em;
+      padding: 5px 13px;
+      border-radius: 999px;
     }
     .pulse-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--wa);
-      box-shadow: 0 0 0 0 rgba(19, 138, 72, 0.6);
+      background: #4ade80;
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
       animation: livePulse 1.8s infinite;
     }
     @keyframes livePulse {
-      0% { box-shadow: 0 0 0 0 rgba(19, 138, 72, 0.6); }
-      70% { box-shadow: 0 0 0 8px rgba(19, 138, 72, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(19, 138, 72, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+      70% { box-shadow: 0 0 0 9px rgba(74, 222, 128, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
     }
-    .intro-card__title {
-      font: 700 clamp(1.75rem, 3.4vw, 2.45rem) / 1.15 var(--f);
-      color: var(--ink);
+    .console__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      padding: 5px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all .2s;
+    }
+    .console__location:hover {
+      background: rgba(255,255,255,0.12);
+      color: var(--amber);
+      border-color: var(--amber);
+    }
+    .console__location .ic {
+      width: 15px;
+      height: 15px;
+      color: var(--amber);
+    }
+    .console__headline {
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .console__headline h1 {
+      font: 700 clamp(1.7rem, 3.4vw, 2.4rem)/1.18 var(--f);
       letter-spacing: -0.02em;
-      margin: 0;
+      margin: 0 0 8px;
+      color: #fff;
     }
-    .intro-card__title .accent-text {
-      color: var(--amber-ink);
-      background: linear-gradient(135deg, var(--ink) 0%, var(--amber-ink) 100%);
+    .console__headline .gold-text {
+      color: var(--amber);
+      background: linear-gradient(135deg, #FFB800 0%, #FFA000 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .intro-card__sub {
-      color: var(--ink-2);
-      font-size: clamp(0.96rem, 1.8vw, 1.08rem);
-      line-height: 1.6;
-      max-width: 62ch;
+    .console__headline p {
+      color: #94a3b8;
+      font-size: clamp(0.94rem, 1.8vw, 1.05rem);
       margin: 0;
+      line-height: 1.55;
     }
-    .intro-card__features {
+
+    /* Vehicle Cards */
+    .v-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    @media (min-width: 768px) {
+      .v-grid { grid-template-columns: 1.25fr 1fr 1fr; }
+    }
+    .v-btn {
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 14px 16px;
+      text-align: left;
+      cursor: pointer;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      transition: all 0.22s ease;
+      font-family: inherit;
+    }
+    .v-btn:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,184,0,0.5);
+      transform: translateY(-2px);
+    }
+    .v-btn.selected {
+      background: rgba(255,184,0,0.1);
+      border-color: var(--amber);
+      box-shadow: 0 0 25px -4px rgba(255,184,0,0.3);
+    }
+    .v-btn__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .v-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .v-tag--main {
+      background: var(--amber);
+      color: #0B1626;
+    }
+    .v-tag--opt {
+      background: rgba(255,255,255,0.1);
+      color: #94a3b8;
+    }
+    .v-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+    .v-btn strong {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #fff;
+      display: block;
+    }
+    .v-btn span.v-meta {
+      font-size: 0.83rem;
+      color: #94a3b8;
+      display: block;
+    }
+
+    /* Route Chips */
+    .route-box {
+      background: rgba(255,255,255,0.03);
+      border-radius: 18px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .route-box__title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .route-box__title .ic {
+      color: var(--amber);
+      width: 17px;
+      height: 17px;
+    }
+    .r-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .r-chip {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #cbd5e1;
+      padding: 8px 15px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: inherit;
+    }
+    .r-chip:hover {
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      border-color: rgba(255,255,255,0.3);
+    }
+    .r-chip.selected {
+      background: var(--amber);
+      color: #0B1626;
+      font-weight: 700;
+      border-color: var(--amber);
+      box-shadow: 0 4px 16px rgba(255,184,0,0.35);
+    }
+
+    /* Live Calculator / Action Bar */
+    .console__action {
+      background: rgba(0,0,0,0.4);
+      border-radius: 20px;
+      padding: 18px 22px;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: grid;
+      gap: 16px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    @media (min-width: 820px) {
+      .console__action {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: 24px;
+      }
+    }
+    .action__preview {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .preview__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--amber);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .preview__text {
+      margin: 0;
+      font-size: 0.96rem;
+      color: #f1f5f9;
+      line-height: 1.5;
+    }
+    .preview__text strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    .action__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: stretch;
+    }
+    @media (min-width: 820px) {
+      .action__buttons {
+        justify-content: flex-end;
+      }
+    }
+    .btn--c-wa {
+      flex: 1;
+      min-width: 210px;
+      background: var(--wa);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 999px;
+      padding: 12px 20px;
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 18px rgba(19,138,72,0.4);
+    }
+    .btn--c-wa:hover {
+      background: #179f53;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(19,138,72,0.6);
+    }
+    .btn--c-call {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border-radius: 999px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn--c-call:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Trust points */
+    .console__trust {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 4px;
-      width: 100%;
+      gap: 14px 24px;
+      margin-top: 18px;
+      font-size: 0.83rem;
+      color: #94a3b8;
+      position: relative;
+      z-index: 2;
     }
-    .feat-pill {
+    .trust-item {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 12px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--ink);
+      gap: 6px;
     }
-    .feat-pill .ic {
-      width: 16px;
-      height: 16px;
-      color: var(--amber-ink);
-    }
-    .intro-card__footer {
-      margin-top: 6px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .gmb-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 6px rgba(11,22,38,0.04);
-    }
-    .gmb-btn:hover {
-      border-color: var(--ink);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(11,22,38,0.08);
-    }
-    .gmb-btn .ic {
-      width: 17px;
-      height: 17px;
-      color: var(--amber-ink);
-    }
-    .gmb-btn .go {
-      color: var(--ink-2);
-      margin-left: 2px;
+    .trust-item .ic {
+      width: 15px;
+      height: 15px;
+      color: var(--amber);
     }
 
     /* services */
@@ -604,41 +838,97 @@
         </div>
       </div>
     </div>
-    <div class="intro-card">
-      <div class="intro-card__badge">
-        <span class="pulse-dot"></span>
-        <span>সার্বক্ষণিক ২৪/৭ সার্ভিস চালু আছে · Open 24/7</span>
-      </div>
-
-      <h1 class="intro-card__title">
-        Rent a Car in <span class="accent-text">Rajshahi</span>
-      </h1>
-      
-      <p class="intro-card__sub bn">
-        রাজশাহীতে আমাদের প্রধান সার্ভিস <strong>টয়োটা নোয়াহ (Noah) মাইক্রোবাস</strong>। এছাড়া আপনার চাহিদা অনুযায়ী সেডান বা এসইউভি সহ যেকোনো গাড়ির সুব্যবস্থা করা হয়। দূরত্ব ও লোকেশন অনুযায়ী ভাড়া আলোচনা সাপেক্ষে—সঠিক রেট জানতে সরাসরি WhatsApp করুন!
-      </p>
-
-      <div class="intro-card__features">
-        <div class="feat-pill">
-          <svg class="ic"><use href="#i-shield"/></svg>
-          <span>নোয়াহ মাইক্রোবাস (আমাদের প্রধান সার্ভিস)</span>
+    <div class="smart-console">
+      <div class="console__top">
+        <div class="console__status">
+          <span class="pulse-dot"></span>
+          <span>অন-কল ২৪/৭ কুইক ট্রিপ সাপোর্ট · Open 24/7</span>
         </div>
-        <div class="feat-pill">
-          <svg class="ic"><use href="#i-route"/></svg>
-          <span>চাহিদা অনুযায়ী অন্য যেকোনো গাড়ি ব্যবস্থাযোগ্য</span>
-        </div>
-        <div class="feat-pill">
-          <svg class="ic"><use href="#i-wa"/></svg>
-          <span>ভাড়া লোকেশন অনুযায়ী আলোচনা সাপেক্ষে</span>
-        </div>
-      </div>
-
-      <div class="intro-card__footer">
-        <a class="gmb-btn" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener">
+        <a class="console__location" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener">
           <svg class="ic"><use href="#i-pin"/></svg>
-          <span><strong>শালবাগান, সোপুরা, রাজশাহী</strong> · Google Maps-এ আমাদের অবস্থান</span>
-          <svg class="ic go"><use href="#i-arrow"/></svg>
+          <span>শালবাগান, সোপুরা, রাজশাহী</span>
         </a>
+      </div>
+
+      <div class="console__headline">
+        <h1>Rent a Car in <span class="gold-text">Rajshahi</span></h1>
+        <p class="bn">আপনার প্রয়োজনীয় গাড়ি ও গন্তব্য বেছে নিন — সঠিক ও সাশ্রয়ী ভাড়া জানতে সরাসরি WhatsApp-এ বার্তা পাঠান</p>
+      </div>
+
+      <!-- Step 1: Vehicle Selection -->
+      <div class="v-grid" role="radiogroup" aria-label="Select Vehicle">
+        <button type="button" class="v-btn selected" data-vehicle="Toyota Noah Microbus (৭-১২ সিট - মূল সার্ভিস)">
+          <div class="v-btn__top">
+            <span class="v-tag v-tag--main">⭐ আমাদের মূল সার্ভিস</span>
+            <span class="v-icon">🚐</span>
+          </div>
+          <strong>Toyota Noah Microbus</strong>
+          <span class="v-meta">৭-১২ সিট · নিজস্ব গাড়ি · সম্পূর্ণ এসি</span>
+        </button>
+
+        <button type="button" class="v-btn" data-vehicle="Sedan / প্রাইভেট কার (৪ সিট - প্রিমিও/এলিয়ন)">
+          <div class="v-btn__top">
+            <span class="v-tag v-tag--opt">চাহিদা অনুযায়ী</span>
+            <span class="v-icon">🚗</span>
+          </div>
+          <strong>Sedan / প্রাইভেট কার</strong>
+          <span class="v-meta">৪ সিট · প্রিমিও, এলিয়ন, এক্সিও</span>
+        </button>
+
+        <button type="button" class="v-btn" data-vehicle="SUV / প্রিমিয়াম জিপ (প্রাডো/পাজেরো)">
+          <div class="v-btn__top">
+            <span class="v-tag v-tag--opt">চাহিদা অনুযায়ী</span>
+            <span class="v-icon">🚙</span>
+          </div>
+          <strong>SUV / প্রিমিয়াম জিপ</strong>
+          <span class="v-meta">ভিআইপি সফর · প্রাডো, পাজেরো</span>
+        </button>
+      </div>
+
+      <!-- Step 2: Route Destination Selection -->
+      <div class="route-box">
+        <div class="route-box__title">
+          <svg class="ic"><use href="#i-route"/></svg>
+          <span>কোথায় যাবেন? গন্তব্য সিলেক্ট করুন:</span>
+        </div>
+        <div class="r-chips" id="consoleRouteChips">
+          <button type="button" class="r-chip selected" data-dest="ঢাকা (Dhaka)">ঢাকা (Dhaka)</button>
+          <button type="button" class="r-chip" data-dest="নাটোর">নাটোর</button>
+          <button type="button" class="r-chip" data-dest="নওগাঁ">নওগাঁ</button>
+          <button type="button" class="r-chip" data-dest="বগুড়া">বগুড়া</button>
+          <button type="button" class="r-chip" data-dest="পাবনা">পাবনা</button>
+          <button type="button" class="r-chip" data-dest="চাঁপাইনবাবগঞ্জ">চাঁপাইনবাবগঞ্জ</button>
+          <button type="button" class="r-chip" data-dest="রাজশাহী লোকাল / শহর">রাজশাহী লোকাল</button>
+          <button type="button" class="r-chip" data-dest="রাজশাহী এয়ারপোর্ট">এয়ারপোর্ট ট্রান্সফার</button>
+          <button type="button" class="r-chip" data-dest="অন্যান্য জেলা">অন্যান্য যেকোনো জেলা</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Dynamic Live Preview & Instant Action -->
+      <div class="console__action">
+        <div class="action__preview">
+          <span class="preview__badge">ভাড়া: স্থান ও আলোচনা সাপেক্ষে</span>
+          <p class="preview__text" id="previewSelectionText">
+            গাড়ি: <strong>Toyota Noah Microbus</strong> &nbsp;➔&nbsp; গন্তব্য: <strong>ঢাকা (Dhaka)</strong>
+          </p>
+        </div>
+        <div class="action__buttons">
+          <a class="btn--c-wa" id="dynamicConsoleWa" href="#" target="_blank" rel="noopener">
+            <svg class="ic"><use href="#i-wa"/></svg>
+            <span>WhatsApp-এ ভাড়া জানুন</span>
+          </a>
+          <a class="btn--c-call" href="tel:+8801761280031">
+            <svg class="ic"><use href="#i-phone"/></svg>
+            <span>কল দিন</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Footer inside Console -->
+      <div class="console__trust">
+        <div class="trust-item"><svg class="ic"><use href="#i-shield"/></svg><span>দক্ষ ও অভিজ্ঞ ড্রাইভার</span></div>
+        <div class="trust-item"><svg class="ic"><use href="#i-heart"/></svg><span>পরিষ্কার ও আরামদায়ক এসি গাড়ি</span></div>
+        <div class="trust-item"><svg class="ic"><use href="#i-award"/></svg><span>কোনো লুকানো বা অতিরিক্ত চার্জ নেই</span></div>
       </div>
     </div>
   </div>
@@ -896,6 +1186,44 @@
       dock.classList.toggle('is-hidden', en[0].isIntersecting);
     }, { threshold: 0.15 }).observe(hc);
   }
+
+  /* Smart Console Vehicle & Route Selector */
+  var selectedVehicle = 'Toyota Noah Microbus (৭-১২ সিট - মূল সার্ভিস)';
+  var selectedRoute = 'ঢাকা (Dhaka)';
+  var vBtns = $$('.v-btn');
+  var rChips = $$('.r-chip');
+  var pText = $('#previewSelectionText');
+  var dWaBtn = $('#dynamicConsoleWa');
+
+  function updateConsoleState() {
+    if (pText) {
+      pText.innerHTML = 'গাড়ি: <strong>' + selectedVehicle + '</strong> &nbsp;➔&nbsp; গন্তব্য: <strong>' + selectedRoute + '</strong>';
+    }
+    if (dWaBtn) {
+      var msg = 'Hello Abdullah Rent-A-Car,\nআমি ' + selectedRoute + ' যাওয়ার জন্য ' + selectedVehicle + ' ভাড়া নিতে চাই। ভাড়া ও বিস্তারিত জানাবেন কি?';
+      dWaBtn.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+    }
+  }
+
+  vBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      vBtns.forEach(function (b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      selectedVehicle = btn.getAttribute('data-vehicle');
+      updateConsoleState();
+    });
+  });
+
+  rChips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      rChips.forEach(function (c) { c.classList.remove('selected'); });
+      chip.classList.add('selected');
+      selectedRoute = chip.getAttribute('data-dest');
+      updateConsoleState();
+    });
+  });
+
+  updateConsoleState();
 
   /* menu */
   var mb = $('#menuBtn'), dr = $('#drawer');
