@@ -1,0 +1,489 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Abdullah Rent-A-Car</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Noto+Sans+Bengali:wght@400;600&display=swap">
+<style>
+/* Layout concept: one calm column. Big car photo first, then short sections with plenty of air.
+   Type is a single family at light weights; navy and amber come from the logo. */
+:root{
+  --bg:#F4F6FA;
+  --surface:#FFFFFF;
+  --panel:#E9EEF5;
+  --panel-2:#DDE4EE;
+  --ink:#0B1626;
+  --ink-2:#5A6A80;
+  --line:#DCE3EC;
+  --amber:#FFB800;
+  --amber-ink:#8A5F00;
+  --on-navy:#F4F6FA;
+  --on-navy-2:#A9B6C8;
+  --navy-line:#22324A;
+  --wa:#138A48;
+  --glass:#C9D9E8;
+  --ground:rgba(11,22,38,.10);
+  --bg-glass:rgba(244,246,250,.92);
+  --f:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --gutter:16px;
+  --r-lg:26px; --r-md:18px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--f);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg-glass)}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
+section[id]{scroll-margin-top:76px}
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+@media (min-width:720px){:root{--gutter:28px}}
+.ic{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.eyebrow{font:600 .74rem/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--amber-ink)}
+.h2{font:600 clamp(1.5rem,2.8vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em;text-wrap:balance}
+.lede{color:var(--ink-2);max-width:56ch;text-wrap:pretty}
+.sec{padding-block:clamp(52px,7vw,88px) 0}
+.sec__head{display:grid;gap:10px;margin-bottom:clamp(20px,3vw,32px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.7rem 1.3rem;border-radius:999px;border:0;background:var(--ink);color:#fff;font:600 .95rem/1 var(--f);text-decoration:none;cursor:pointer;transition:transform .18s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn--wa{background:var(--wa)}
+.btn--amber{background:var(--amber);color:var(--ink)}
+.btn--sm{min-height:38px;padding:.5rem 1rem;font-size:.9rem}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:18px;min-height:60px}
+.brand{display:block;flex:none;line-height:0}
+.brand img{height:38px;width:auto;display:block}
+.nav{display:none;margin-left:auto;gap:2px}
+.nav a{padding:.45rem .8rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;color:var(--ink-2)}
+.nav a:hover{background:var(--panel);color:var(--ink)}
+.hdr__cta{margin-left:auto;display:flex;gap:8px;align-items:center}
+.menu-btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:0;background:var(--panel);cursor:pointer;color:var(--ink)}
+@media (min-width:900px){.nav{display:flex}.hdr__cta{margin-left:0}.menu-btn{display:none}}
+.drawer{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 30px 40px -30px rgba(11,22,38,.4)}
+.drawer.open{display:block}
+.drawer .wrap{display:block;min-height:0;padding-block:4px 16px}
+.drawer .lnk{display:flex;justify-content:space-between;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500}
+.drawer .lnk .ic{color:var(--ink-2)}
+.drawer__cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+@media (min-width:900px){.drawer{display:none!important}}
+
+/* hero */
+.hero{padding-top:12px}
+.stage{position:relative}
+.stage__img{overflow:hidden;border-radius:var(--r-lg);aspect-ratio:4/5;background:var(--panel-2)}
+.stage__img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:settle 1.5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes settle{from{transform:scale(1.04)}to{transform:scale(1)}}
+@media (min-width:700px){.stage__img{aspect-ratio:2/1}}
+.hero-cta{position:relative;z-index:2;margin:-40px 10px 0}
+.hero-cta__in{display:grid;gap:8px;padding:8px;border-radius:24px;background:var(--surface);box-shadow:0 1px 0 var(--line),0 24px 50px -26px rgba(11,22,38,.5)}
+@media (min-width:640px){.hero-cta__in{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){
+  .hero-cta{position:absolute;left:22px;right:22px;bottom:22px;margin:0;pointer-events:none}
+  .hero-cta__in{display:flex;justify-content:space-between;padding:0;background:none;box-shadow:none;border-radius:0}
+  .hero-cta .bigbtn{width:260px;pointer-events:auto;box-shadow:0 18px 36px -16px rgba(0,0,0,.55)}
+}
+.bigbtn{display:flex;align-items:center;gap:12px;padding:9px 16px 9px 9px;border-radius:18px;background:var(--ink);color:#fff;text-decoration:none;transition:transform .18s ease}
+.bigbtn:hover{transform:translateY(-2px)}
+.bigbtn--amber{background:var(--amber);color:var(--ink)}
+.bigbtn--wa{background:var(--wa)}
+.bigbtn .badge{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;flex:none;background:var(--ink);color:var(--amber)}
+.bigbtn--wa .badge{background:#fff;color:var(--wa)}
+.bigbtn small{display:block;font:500 .72rem/1 var(--f);letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:4px}
+.bigbtn strong{display:block;font:600 1.02rem/1 var(--f);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.bigbtn .go{margin-left:auto;opacity:.75}
+
+.intro{display:grid;gap:10px;justify-items:center;text-align:center;margin-top:clamp(26px,4vw,40px)}
+.hero h1{font:600 clamp(1.5rem,3vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em}
+.hero .lede{font-size:1rem}
+.gmb-pill{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:9px 16px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.9rem}
+.gmb-pill:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.gmb-pill .ic{width:18px;height:18px;color:var(--amber-ink)}
+
+/* services */
+.svc{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:640px){.svc{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.svc{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.tile-s{display:flex;align-items:center;gap:11px;min-width:0;padding:12px 14px;border-radius:16px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.93rem;line-height:1.25;transition:box-shadow .18s ease,transform .18s ease}
+.tile-s:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.tile-s .ico{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:11px;background:var(--panel)}
+.tile-s .ico .ic{width:19px;height:19px}
+.tile-s.hot{background:var(--ink);color:var(--on-navy);box-shadow:none}
+.tile-s.hot .ico{background:var(--amber);color:var(--ink)}
+.note{margin-top:14px;font-size:.88rem;color:var(--ink-2)}
+
+/* fleet */
+.fleet-grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.fleet-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.car{display:flex;flex-direction:column;gap:14px;padding:12px 12px 18px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);min-width:0}
+.car__media{position:relative;aspect-ratio:5/4;border-radius:12px;background:var(--panel-2);overflow:hidden;display:grid;place-items:center}
+.car__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.car__media svg.art{width:88%;height:auto}
+.car__body{display:grid;gap:8px;padding-inline:6px}
+.car h3{font:600 1.2rem/1.2 var(--f)}
+.car p{color:var(--ink-2);font-size:.94rem}
+.car .btn{margin-top:6px;justify-self:start}
+.art .body{fill:var(--surface);stroke:var(--ink);stroke-width:3.5;stroke-linejoin:round}
+.art .win{fill:var(--glass);stroke:var(--ink);stroke-width:3;stroke-linejoin:round}
+.art .sw{fill:none;stroke:var(--amber);stroke-width:5;stroke-linecap:round}
+.art .arch{fill:var(--panel-2)}
+.art .tire{fill:var(--ink)}
+.art .hub{fill:var(--surface);stroke:var(--ink);stroke-width:3}
+.art .gnd{fill:var(--ground)}
+
+/* why */
+.why{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.why{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.wy{display:grid;gap:8px;align-content:start;padding:20px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.wy .ico{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--panel)}
+.wy h3{font:600 1.05rem/1.25 var(--f)}
+.wy p{font-size:.92rem;color:var(--ink-2)}
+
+/* area */
+.routes{display:grid;gap:22px;padding:clamp(14px,2.4vw,26px);border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+@media (min-width:960px){.routes{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:32px;align-items:stretch}}
+.map{display:flex;align-items:center;border-radius:var(--r-md);background:var(--bg);padding:10px 8px 14px}
+.map svg{display:block;width:100%;height:auto;font-family:var(--f)}
+.map text{fill:var(--ink);font-size:15px;font-weight:500}
+.map text.dhaka{fill:var(--amber-ink);font-size:18px;font-weight:600}
+.map text.hub{font-size:18px;font-weight:600}
+.map .cap{fill:var(--ink-2);font-size:11px;letter-spacing:.08em}
+.map .spoke{stroke:var(--ink-2);stroke-width:1.6;stroke-dasharray:3 6;stroke-linecap:round;fill:none;opacity:.7}
+.map .main{stroke:var(--amber);stroke-width:4;stroke-dasharray:2 9;stroke-linecap:round;fill:none;animation:march 1.4s linear infinite}
+@keyframes march{to{stroke-dashoffset:-22}}
+.map .node{fill:var(--surface);stroke:var(--ink);stroke-width:2.5}
+.map .hubdot{fill:var(--amber);stroke:var(--ink);stroke-width:3}
+.map .pulse{fill:none;stroke:var(--amber);stroke-width:2.5;transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.9}to{transform:scale(2.6);opacity:0}}
+.rlist{display:grid;gap:8px;align-content:center}
+.rlist a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:var(--bg);text-decoration:none;font-weight:500;font-size:.95rem;transition:background .18s ease}
+.rlist a:hover{background:var(--panel)}
+.rlist .ic{width:18px;height:18px;color:var(--amber-ink)}
+.rlist .go{margin-left:auto;color:var(--ink-2)}
+.rlist li.top a{background:var(--ink);color:var(--on-navy)}
+.rlist li.top .ic{color:var(--amber)}
+
+/* contact */
+.contact{margin-top:clamp(52px,7vw,88px);background:var(--ink);color:var(--on-navy)}
+.contact__in{display:grid;gap:26px;padding-block:clamp(40px,6vw,64px)}
+@media (min-width:900px){.contact__in{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:56px}}
+.contact h2{font:600 clamp(1.5rem,2.8vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em}
+.contact p.lede{color:var(--on-navy-2);margin-top:10px}
+.contact .meta{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.92rem;color:var(--on-navy-2)}
+.contact .meta .ic{color:var(--amber);width:18px;height:18px}
+.contact__btns{display:grid;gap:10px;min-width:min(100%,320px)}
+.contact .bigbtn{padding:12px 18px 12px 12px}
+.contact .bigbtn strong{font-size:1.08rem}
+.contact .bigbtn .badge{width:42px;height:42px}
+.gmb{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px var(--navy-line);color:var(--on-navy);text-decoration:none;font-weight:500;font-size:.95rem}
+.gmb:hover{background:rgba(255,255,255,.13)}
+.gmb .ic{width:18px;height:18px;color:var(--amber)}
+.bn{font-family:'Noto Sans Bengali',var(--f)}
+.intro .bn{color:var(--ink-2);font-size:.95rem}
+.contact .about{margin-top:12px;font-size:.88rem;color:var(--on-navy-2);max-width:62ch;line-height:1.7}
+.legal{border-top:1px solid var(--navy-line);padding-block:16px;font-size:.82rem;color:var(--on-navy-2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px}
+@media (max-width:759px){.legal{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+
+/* mobile dock */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:25;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px max(var(--gutter),env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(var(--gutter),env(safe-area-inset-left,0px));background:var(--bg-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .25s ease}
+.dock.is-hidden{transform:translateY(115%)}
+.dock .btn{min-height:48px}
+@media (min-width:760px){.dock{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9.3 8.6c.3 2.4 2.7 4.8 5.1 5.1l1.2-1.2-1.8-1-.9.7a3.7 3.7 0 0 1-1.7-1.7l.7-.9-1-1.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-cal2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+    <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="8.5" cy="15" r="5.5"/><circle cx="15.5" cy="15" r="5.5"/><path d="M12 2.5l1.6 2.2L12 7 10.4 4.7z"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  </defs>
+</svg>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Abdullah Rent-A-Car, home"><img src="img/logo-on-light.svg" alt="Abdullah Rent-A-Car" width="91" height="38"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#fleet">Our cars</a>
+      <a href="#why">Why us</a>
+      <a href="#areas">Service area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="btn btn--sm" href="tel:+8801761280031"><svg class="ic"><use href="#i-phone"/></svg>Call</a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer">
+    <div class="wrap">
+      <a class="lnk" href="#services">Services <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="lnk" href="#fleet">Our cars <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="lnk" href="#why">Why us <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="lnk" href="#areas">Service area <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="lnk" href="#contact">Contact <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <div class="drawer__cta">
+        <a class="btn btn--amber" href="tel:+8801761280031"><svg class="ic"><use href="#i-phone"/></svg>Call now</a>
+        <a class="btn btn--wa" href="https://wa.me/8801755964871" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="stage">
+      <div class="stage__img">
+        <img src="img/hero.jpg" alt="Abdullah Rent-A-Car, car rental in Rajshahi. White Toyota Noah microbus on a country road at sunrise, with Sedan, SUV, Noah / Microbus and 24/7 service options" width="2098" height="749" fetchpriority="high">
+      </div>
+      <div class="hero-cta">
+        <div class="hero-cta__in">
+          <a class="bigbtn bigbtn--amber" href="tel:+8801761280031">
+            <span class="badge"><svg class="ic"><use href="#i-phone"/></svg></span>
+            <span><small>Call now</small><strong>01761-280031</strong></span>
+            <svg class="ic go"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="bigbtn bigbtn--wa" href="https://wa.me/8801755964871" target="_blank" rel="noopener">
+            <span class="badge"><svg class="ic"><use href="#i-wa"/></svg></span>
+            <span><small>WhatsApp</small><strong>01755-964871</strong></span>
+            <svg class="ic go"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="intro">
+      <h1>Rent a car in Rajshahi</h1>
+      <p class="lede">Safe ride. Better journey. Sedan, SUV and Noah microbus on rent, open 24/7.</p>
+      <p class="bn" lang="bn">রাজশাহীতে গাড়ি ভাড়া · ২৪ ঘণ্টা সার্ভিস</p>
+      <a class="gmb-pill" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Find us on Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec__head">
+      <span class="eyebrow">Our services</span>
+      <h2 class="h2">Car rental services in Rajshahi</h2>
+    </div>
+    <div class="svc">
+      <a class="tile-s hot" href="#contact" data-wa="Service: Rajshahi to Dhaka car rental"><span class="ico"><svg class="ic"><use href="#i-route"/></svg></span>Rajshahi to Dhaka</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Daily car rental"><span class="ico"><svg class="ic"><use href="#i-cal"/></svg></span>Daily rental</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Monthly car rental"><span class="ico"><svg class="ic"><use href="#i-cal2"/></svg></span>Monthly rental</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Airport transfer"><span class="ico"><svg class="ic"><use href="#i-plane"/></svg></span>Airport transfer</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Family trip"><span class="ico"><svg class="ic"><use href="#i-users"/></svg></span>Family trip</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Wedding car rental"><span class="ico"><svg class="ic"><use href="#i-rings"/></svg></span>Wedding car</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Corporate travel"><span class="ico"><svg class="ic"><use href="#i-brief"/></svg></span>Corporate travel</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Long distance travel"><span class="ico"><svg class="ic"><use href="#i-route"/></svg></span>Long distance</a>
+      <a class="tile-s" href="#contact" data-wa="Service: One way trip"><span class="ico"><svg class="ic"><use href="#i-arrow"/></svg></span>One way trip</a>
+      <a class="tile-s" href="#contact" data-wa="Service: Round trip"><span class="ico"><svg class="ic"><use href="#i-repeat"/></svg></span>Round trip</a>
+    </div>
+    <p class="note">Tap a service to message us on WhatsApp. Contact us for pricing.</p>
+  </div>
+</section>
+
+<section class="sec" id="fleet">
+  <div class="wrap">
+    <div class="sec__head">
+      <span class="eyebrow">Our cars</span>
+      <h2 class="h2">Sedan, SUV and Noah microbus for rent</h2>
+    </div>
+    <div class="fleet-grid">
+      <article class="car">
+        <div class="car__media">
+          <svg class="art" viewBox="0 0 360 140" role="img" aria-label="Sedan">
+            <ellipse class="gnd" cx="180" cy="128" rx="150" ry="7"/>
+            <path class="body" d="M24 104 L24 92 C24 85 30 81 40 79 L96 70 C116 48 146 36 182 36 C220 36 250 48 266 68 L306 76 C324 79 334 86 334 95 L334 104 C334 107 331 109 328 109 L30 109 C26 109 24 107 24 104 Z"/>
+            <path class="win" d="M108 68 C124 52 148 44 176 43 L176 68 Z"/>
+            <path class="win" d="M188 43 C216 44 238 52 254 66 L254 68 L188 68 Z"/>
+            <path class="sw" d="M52 88 C120 80 226 80 312 92"/>
+            <circle class="arch" cx="94" cy="108" r="28"/><circle class="arch" cx="268" cy="108" r="28"/>
+            <circle class="tire" cx="94" cy="108" r="22"/><circle class="hub" cx="94" cy="108" r="9"/>
+            <circle class="tire" cx="268" cy="108" r="22"/><circle class="hub" cx="268" cy="108" r="9"/>
+          </svg>
+        </div>
+        <div class="car__body">
+          <h3>Sedan</h3>
+          <p>Smooth and economical for city rides, airport runs and small groups.</p>
+          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: Sedan"><svg class="ic"><use href="#i-wa"/></svg>Ask about Sedan</a>
+        </div>
+      </article>
+      <article class="car">
+        <div class="car__media">
+          <svg class="art" viewBox="0 0 360 140" role="img" aria-label="SUV">
+            <ellipse class="gnd" cx="180" cy="128" rx="150" ry="7"/>
+            <path class="body" d="M24 104 L24 86 C24 78 30 74 40 72 L84 66 L112 36 C115 32 120 30 126 30 L238 30 C245 30 251 32 255 37 L282 68 L318 74 C330 77 336 83 336 92 L336 104 C336 107 333 109 330 109 L30 109 C26 109 24 107 24 104 Z"/>
+            <path class="win" d="M124 40 L106 64 L172 64 L172 40 Z"/>
+            <path class="win" d="M184 40 L184 64 L262 64 L242 40 Z"/>
+            <path class="sw" d="M52 86 C120 79 226 79 314 90"/>
+            <circle class="arch" cx="96" cy="108" r="30"/><circle class="arch" cx="268" cy="108" r="30"/>
+            <circle class="tire" cx="96" cy="108" r="24"/><circle class="hub" cx="96" cy="108" r="10"/>
+            <circle class="tire" cx="268" cy="108" r="24"/><circle class="hub" cx="268" cy="108" r="10"/>
+          </svg>
+        </div>
+        <div class="car__body">
+          <h3>SUV</h3>
+          <p>Extra room and a higher seat for family trips and longer roads.</p>
+          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: SUV"><svg class="ic"><use href="#i-wa"/></svg>Ask about SUV</a>
+        </div>
+      </article>
+      <article class="car">
+        <div class="car__media">
+          <img src="img/noah.jpg" alt="Toyota Noah microbus for rent in Rajshahi, front view" width="630" height="505">
+        </div>
+        <div class="car__body">
+          <h3>Noah / Microbus</h3>
+          <p>Room for the whole group, from family tours to wedding guests.</p>
+          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: Noah / Microbus"><svg class="ic"><use href="#i-wa"/></svg>Ask about Noah</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec__head">
+      <span class="eyebrow">Why Abdullah Rent-A-Car</span>
+      <h2 class="h2">Why choose Abdullah Rent-A-Car</h2>
+    </div>
+    <div class="why">
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Safe Ride</h3><p>Well-kept cars and careful driving on every trip.</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-heart"/></svg></span><h3>Comfort Journey</h3><p>Clean, comfortable seats and a car sized for your group.</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>Your Trust</h3><p>Fare and terms are agreed with you before the trip starts.</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-moon"/></svg></span><h3>Open 24/7</h3><p>Call or message at any hour, early flights and late arrivals included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="areas">
+  <div class="wrap">
+    <div class="sec__head">
+      <span class="eyebrow">Service area</span>
+      <h2 class="h2">Rajshahi to Dhaka and nearby districts</h2>
+      <p class="lede">Rajshahi, Dhaka, Natore, Naogaon, Bogura, Pabna and Chapainawabganj. Pick a route to message us.</p>
+    </div>
+    <div class="routes">
+      <div class="map">
+        <svg viewBox="0 0 640 290" role="img" aria-label="Schematic map of service districts around Rajshahi, with Dhaka to the east">
+          <path class="spoke" d="M152 142 L80 102"/>
+          <path class="spoke" d="M152 142 L226 66"/>
+          <path class="spoke" d="M152 142 L239 135"/>
+          <path class="spoke" d="M152 142 C230 120 280 80 324 58"/>
+          <path class="spoke" d="M152 142 C200 160 250 190 295 207"/>
+          <path class="main" d="M152 142 C300 120 440 200 557 240"/>
+          <circle class="node" cx="80" cy="102" r="6"/><text x="80" y="86" text-anchor="middle">Chapainawabganj</text>
+          <circle class="node" cx="226" cy="66" r="6"/><text x="226" y="50" text-anchor="middle">Naogaon</text>
+          <circle class="node" cx="324" cy="58" r="6"/><text x="324" y="42" text-anchor="middle">Bogura</text>
+          <circle class="node" cx="239" cy="135" r="6"/><text x="252" y="127">Natore</text>
+          <circle class="node" cx="295" cy="207" r="6"/><text x="295" y="229" text-anchor="middle">Pabna</text>
+          <circle class="node" cx="557" cy="240" r="9"/><text class="dhaka" x="557" y="222" text-anchor="middle">Dhaka</text>
+          <circle class="pulse" cx="152" cy="142" r="11"/>
+          <circle class="hubdot" cx="152" cy="142" r="11"/>
+          <text class="hub" x="152" y="174" text-anchor="middle">Rajshahi</text>
+          <text class="cap" x="16" y="276">SCHEMATIC MAP, NOT TO SCALE</text>
+        </svg>
+      </div>
+      <ul class="rlist">
+        <li class="top"><a href="#contact" data-wa="Pickup: Rajshahi&#10;Destination: Dhaka"><svg class="ic"><use href="#i-pin"/></svg>Rajshahi to Dhaka<svg class="ic go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="#contact" data-wa="Pickup: Rajshahi&#10;Destination: Natore"><svg class="ic"><use href="#i-pin"/></svg>Rajshahi to Natore<svg class="ic go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="#contact" data-wa="Pickup: Rajshahi&#10;Destination: Naogaon"><svg class="ic"><use href="#i-pin"/></svg>Rajshahi to Naogaon<svg class="ic go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="#contact" data-wa="Pickup: Rajshahi&#10;Destination: Bogura"><svg class="ic"><use href="#i-pin"/></svg>Rajshahi to Bogura<svg class="ic go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="#contact" data-wa="Pickup: Rajshahi&#10;Destination: Pabna"><svg class="ic"><use href="#i-pin"/></svg>Rajshahi to Pabna<svg class="ic go"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="#contact" data-wa="Pickup: Rajshahi&#10;Destination: Chapainawabganj"><svg class="ic"><use href="#i-pin"/></svg>Rajshahi to Chapainawabganj<svg class="ic go"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact__in">
+      <div>
+        <h2>Call or message us anytime</h2>
+        <p class="lede">Tell us where you are going and we will arrange the car.</p>
+        <p class="meta"><svg class="ic"><use href="#i-pin"/></svg>Shalbagan, Sopura, Rajshahi, Bangladesh &nbsp;·&nbsp; Open 24/7</p>
+        <p class="about">Abdullah Rent-A-Car is a car rental service at Shalbagan, Sopura, Rajshahi, Bangladesh. We rent sedans, SUVs and Noah microbuses for city rides, weddings, airport transfers, family trips, corporate travel and Rajshahi to Dhaka journeys, and we serve Natore, Naogaon, Bogura, Pabna and Chapainawabganj. Open 24 hours a day. Call 01761-280031 or WhatsApp 01755-964871.</p>
+        <p class="about bn" lang="bn">রাজশাহীর শালবাগান, সোপুরায় আব্দুল্লাহ রেন্ট-এ-কার। সেডান, এসইউভি ও নোয়াহ মাইক্রোবাস ভাড়া, রাজশাহী থেকে ঢাকা সহ নাটোর, নওগাঁ, বগুড়া, পাবনা ও চাঁপাইনবাবগঞ্জে। ২৪ ঘণ্টা খোলা। কল ০১৭৬১-২৮০০৩১, হোয়াটসঅ্যাপ ০১৭৫৫-৯৬৪৮৭১।</p>
+      </div>
+      <div class="contact__btns">
+        <a class="bigbtn bigbtn--amber" href="tel:+8801761280031"><span class="badge"><svg class="ic"><use href="#i-phone"/></svg></span><span><small>Call</small><strong>01761-280031</strong></span><svg class="ic go"><use href="#i-arrow"/></svg></a>
+        <a class="bigbtn bigbtn--wa" href="https://wa.me/8801755964871" target="_blank" rel="noopener"><span class="badge"><svg class="ic"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><strong>01755-964871</strong></span><svg class="ic go"><use href="#i-arrow"/></svg></a>
+        <a class="gmb" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Find us on Google Maps</a>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Abdullah Rent-A-Car</span><span>Safe Ride | Comfort Journey | Your Trust</span></div>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Quick contact">
+  <a class="btn" href="tel:+8801761280031"><svg class="ic"><use href="#i-phone"/></svg>Call now</a>
+  <a class="btn btn--wa" href="https://wa.me/8801755964871" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+
+<script>
+(function () {
+  var WA = '8801755964871';
+  var INTRO = 'Hello Abdullah Rent-A-Car, I would like to book a car.';
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+
+  /* services, cars and routes open WhatsApp with the choice filled in */
+  $$('[data-wa]').forEach(function (a) {
+    a.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(INTRO + '\n' + a.getAttribute('data-wa'));
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  /* phone action bar shows once the hero buttons scroll out of view */
+  var dock = $('.dock'), hc = $('.hero-cta');
+  if (dock && hc && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) {
+      dock.classList.toggle('is-hidden', en[0].isIntersecting);
+    }, { threshold: 0.15 }).observe(hc);
+  }
+
+  /* menu */
+  var mb = $('#menuBtn'), dr = $('#drawer');
+  function setMenu(open) {
+    dr.classList.toggle('open', open);
+    mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mb.querySelector('use').setAttribute('href', open ? '#i-x' : '#i-menu');
+  }
+  mb.addEventListener('click', function (e) { e.stopPropagation(); setMenu(!dr.classList.contains('open')); });
+  $$('#drawer a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('click', function (e) { if (dr.classList.contains('open') && !dr.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+})();
+</script>
+
+</body></html>
