@@ -416,16 +416,31 @@
     .note{margin-top:14px;font-size:.88rem;color:var(--ink-2)}
 
     /* fleet */
-    .fleet-grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+    .fleet-grid{display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
     @media (min-width:860px){.fleet-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    .car{display:flex;flex-direction:column;gap:14px;padding:12px 12px 18px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);min-width:0}
+    .car{display:flex;flex-direction:column;gap:14px;padding:14px 14px 20px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);min-width:0;position:relative;transition:transform .2s ease, box-shadow .2s ease}
+    .car:hover{transform:translateY(-3px);box-shadow:0 12px 28px -10px rgba(11,22,38,.09), inset 0 0 0 1px var(--line)}
+    .car--featured{box-shadow:0 10px 30px -12px rgba(255,184,0,.35), inset 0 0 0 2px var(--amber)}
+    .car--featured:hover{box-shadow:0 16px 36px -12px rgba(255,184,0,.45), inset 0 0 0 2px var(--amber)}
+    .car__badge{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;padding:4px 10px;border-radius:999px;width:fit-content}
+    .car__badge--featured{background:var(--amber);color:var(--ink)}
+    .car__badge--arranged{background:var(--panel);color:var(--ink-2)}
     .car__media{position:relative;aspect-ratio:5/4;border-radius:12px;background:var(--panel-2);overflow:hidden;display:grid;place-items:center}
     .car__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
     .car__media svg.art{width:88%;height:auto}
-    .car__body{display:grid;gap:8px;padding-inline:6px}
-    .car h3{font:600 1.2rem/1.2 var(--f)}
-    .car p{color:var(--ink-2);font-size:.94rem}
-    .car .btn{margin-top:6px;justify-self:start}
+    .car__body{display:grid;gap:10px;padding-inline:4px}
+    .car h3{font:700 1.25rem/1.2 var(--f);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin:0}
+    .car p{color:var(--ink-2);font-size:.93rem;line-height:1.55;margin:0}
+    .car__rate-info{font-size:.85rem;font-weight:600;color:var(--amber-ink);background:rgba(255,184,0,.12);padding:7px 12px;border-radius:8px;display:flex;align-items:center;gap:6px}
+    .car .btn{margin-top:4px;width:100%}
+
+    /* pricing notice */
+    .pricing-notice{margin-top:24px;padding:22px 24px;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:0 4px 20px -8px rgba(11,22,38,.05);display:grid;gap:16px;align-items:center}
+    @media (min-width:768px){.pricing-notice{grid-template-columns:auto minmax(0,1fr) auto;gap:22px}}
+    .pricing-notice__ico{width:48px;height:48px;border-radius:14px;background:rgba(19,138,72,.1);color:var(--wa);display:grid;place-items:center;flex:none}
+    .pricing-notice__ico .ic{width:26px;height:26px}
+    .pricing-notice__text h4{margin:0 0 4px;font:700 1.05rem/1.3 var(--f);color:var(--ink)}
+    .pricing-notice__text p{margin:0;font-size:.92rem;color:var(--ink-2);line-height:1.55}
     .art .body{fill:var(--surface);stroke:var(--ink);stroke-width:3.5;stroke-linejoin:round}
     .art .win{fill:var(--glass);stroke:var(--ink);stroke-width:3;stroke-linejoin:round}
     .art .sw{fill:none;stroke:var(--amber);stroke-width:5;stroke-linecap:round}
@@ -600,21 +615,21 @@
       </h1>
       
       <p class="intro-card__sub bn">
-        রাজশাহীতে সাশ্রয়ী ও প্রিমিয়াম কার রেন্টাল সার্ভিস — সেডান, এসইউভি ও নোয়াহ মাইক্রোবাস। যেকোনো পারিবারিক ভ্রমণ, বিয়ে বা অফিসের প্রয়োজনে সম্পূর্ণ নিরাপদ ভ্রমণ।
+        রাজশাহীতে আমাদের প্রধান সার্ভিস <strong>টয়োটা নোয়াহ (Noah) মাইক্রোবাস</strong>। এছাড়া আপনার চাহিদা অনুযায়ী সেডান বা এসইউভি সহ যেকোনো গাড়ির সুব্যবস্থা করা হয়। দূরত্ব ও লোকেশন অনুযায়ী ভাড়া আলোচনা সাপেক্ষে—সঠিক রেট জানতে সরাসরি WhatsApp করুন!
       </p>
 
       <div class="intro-card__features">
         <div class="feat-pill">
           <svg class="ic"><use href="#i-shield"/></svg>
-          <span>অভিজ্ঞ চালক ও নিরাপদ রাইড</span>
+          <span>নোয়াহ মাইক্রোবাস (আমাদের প্রধান সার্ভিস)</span>
         </div>
         <div class="feat-pill">
           <svg class="ic"><use href="#i-route"/></svg>
-          <span>রাজশাহী থেকে ঢাকা ও যেকোনো জেলা</span>
+          <span>চাহিদা অনুযায়ী অন্য যেকোনো গাড়ি ব্যবস্থাযোগ্য</span>
         </div>
         <div class="feat-pill">
-          <svg class="ic"><use href="#i-award"/></svg>
-          <span>ন্যায্য রেট ও কোনো হিডেন চার্জ নেই</span>
+          <svg class="ic"><use href="#i-wa"/></svg>
+          <span>ভাড়া লোকেশন অনুযায়ী আলোচনা সাপেক্ষে</span>
         </div>
       </div>
 
@@ -654,10 +669,29 @@
 <section class="sec" id="fleet">
   <div class="wrap">
     <div class="sec__head">
-      <span class="eyebrow">Our fleet</span>
-      <h2 class="h2">Sedan, SUV and Noah microbus for rent</h2>
+      <span class="eyebrow">Our fleet & services</span>
+      <h2 class="h2">আমাদের গাড়িসমূহ (গাড়ির বহর)</h2>
+      <p class="lede">টয়োটা নোয়াহ (Noah) মাইক্রোবাস আমাদের নিজস্ব ও প্রধান সার্ভিস। এছাড়া আপনার প্রয়োজন অনুযায়ী সেডান বা এসইউভি সহ যেকোনো গাড়ির ব্যবস্থা করে দেওয়া হয়। ভাড়া লোকেশন অনুযায়ী আলোচনা সাপেক্ষে।</p>
     </div>
     <div class="fleet-grid">
+      <!-- 1. Noah / Microbus (Main Service) -->
+      <article class="car car--featured">
+        <div class="car__media">
+          <img src="img/noah.jpg" alt="Toyota Noah microbus for rent in Rajshahi - Main Service" width="630" height="505" loading="lazy">
+        </div>
+        <div class="car__body">
+          <span class="car__badge car__badge--featured">⭐ আমাদের প্রধান সার্ভিস (Main Service)</span>
+          <h3>Noah / Microbus (নোয়াহ মাইক্রোবাস)</h3>
+          <p>সুপরিসর ৭-১২ সিটের আরামদায়ক এসি নোয়াহ মাইক্রোবাস। পরিবার নিয়ে ভ্রমণ, বিয়ে, অফিস ট্যুর ও রাজশাহী-ঢাকা রুটে আমাদের মূল সার্ভিস।</p>
+          <div class="car__rate-info">
+            <svg class="ic"><use href="#i-wa"/></svg>
+            <span>ভাড়া: লোকেশন ও আলোচনা সাপেক্ষে</span>
+          </div>
+          <a class="btn btn--wa" href="#contact" data-wa="গাড়ি: Noah / Microbus (লোকেশন অনুযায়ী ভাড়া জানতে চাই)"><svg class="ic"><use href="#i-wa"/></svg>ভাড়া জানতে WhatsApp করুন</a>
+        </div>
+      </article>
+
+      <!-- 2. Sedan (Arranged on request) -->
       <article class="car">
         <div class="car__media">
           <svg class="art" viewBox="0 0 360 140" role="img" aria-label="Sedan Car - Premio, Allion, Axio, Corolla">
@@ -672,11 +706,18 @@
           </svg>
         </div>
         <div class="car__body">
-          <h3>Sedan (সেডান)</h3>
-          <p>Smooth and economical for city rides, airport runs and small families. Toyota Premio, Allion, Axio & Corolla.</p>
-          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: Sedan"><svg class="ic"><use href="#i-wa"/></svg>Ask about Sedan</a>
+          <span class="car__badge car__badge--arranged">চাহিদা অনুযায়ী ব্যবস্থাযোগ্য</span>
+          <h3>Sedan (সেডান / প্রাইভেট কার)</h3>
+          <p>ছোট পরিবার ও ব্যক্তিগত সফরের জন্য গ্রাহকের চাহিদা অনুযায়ী প্রিমিও, এলিয়ন, এক্সিও বা করোলা গাড়ির দ্রুত ব্যবস্থা করা হয়।</p>
+          <div class="car__rate-info">
+            <svg class="ic"><use href="#i-wa"/></svg>
+            <span>ভাড়া: লোকেশন ও আলোচনা সাপেক্ষে</span>
+          </div>
+          <a class="btn btn--wa btn--sm" href="#contact" data-wa="গাড়ি: Sedan / প্রাইভেট কার (ভাড়া ও ব্যবস্থা সম্পর্কে জানতে চাই)"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp-এ ভাড়া জানুন</a>
         </div>
       </article>
+
+      <!-- 3. SUV (Arranged on request) -->
       <article class="car">
         <div class="car__media">
           <svg class="art" viewBox="0 0 360 140" role="img" aria-label="SUV Car - Prado, Pajero">
@@ -691,21 +732,28 @@
           </svg>
         </div>
         <div class="car__body">
-          <h3>SUV (এসইউভি)</h3>
-          <p>Extra room, powerful engine and high ground clearance for VIP journeys, official tours and long trips.</p>
-          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: SUV"><svg class="ic"><use href="#i-wa"/></svg>Ask about SUV</a>
+          <span class="car__badge car__badge--arranged">চাহিদা অনুযায়ী ব্যবস্থাযোগ্য</span>
+          <h3>SUV (এসইউভি / জিপ)</h3>
+          <p>ভিআইপি সফর ও স্পেশাল প্রটোকলের জন্য প্রাডো, পাজেরো ইত্যাদি প্রিমিয়াম এসইউভি গাড়ি গ্রাহকের চাহিদা অনুযায়ী প্রস্তুত করা হয়।</p>
+          <div class="car__rate-info">
+            <svg class="ic"><use href="#i-wa"/></svg>
+            <span>ভাড়া: লোকেশন ও আলোচনা সাপেক্ষে</span>
+          </div>
+          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: SUV (ভাড়া ও ব্যবস্থা সম্পর্কে জানতে চাই)"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp-এ ভাড়া জানুন</a>
         </div>
       </article>
-      <article class="car">
-        <div class="car__media">
-          <img src="img/noah.jpg" alt="Toyota Noah microbus for rent in Rajshahi - 7-12 seats" width="630" height="505" loading="lazy">
-        </div>
-        <div class="car__body">
-          <h3>Noah / Microbus (নোয়াহ মাইক্রোবাস)</h3>
-          <p>Spacious 7 to 12 seater microbus for whole families, tourist tours and wedding party transport in Rajshahi.</p>
-          <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: Noah / Microbus"><svg class="ic"><use href="#i-wa"/></svg>Ask about Noah</a>
-        </div>
-      </article>
+    </div>
+
+    <!-- Pricing notice banner -->
+    <div class="pricing-notice">
+      <div class="pricing-notice__ico"><svg class="ic"><use href="#i-wa"/></svg></div>
+      <div class="pricing-notice__text">
+        <h4>গাড়ির ভাড়া স্থান, গন্তব্য ও আলোচনা সাপেক্ষে নির্ধারিত হয়</h4>
+        <p>যাত্রার পিকআপ পয়েন্ট, গন্তব্য ও দূরত্বের উপর ভিত্তি করে সবচেয়ে সাশ্রয়ী ভাড়া চূড়ান্ত করা হয়। আপনার রুটের সঠিক রেট জানতে সরাসরি WhatsApp-এ কথা বলুন।</p>
+      </div>
+      <a class="btn btn--wa" href="https://wa.me/8801755964871?text=Hello%20Abdullah%20Rent-A-Car%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AD%E0%A6%BE%E0%A7%9Call%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87" target="_blank" rel="noopener">
+        <svg class="ic"><use href="#i-wa"/></svg>WhatsApp-এ ভাড়া জানুন
+      </a>
     </div>
   </div>
 </section>
@@ -775,12 +823,12 @@
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> রাজশাহী থেকে ঢাকা গাড়ি বা নোয়াহ মাইক্রোবাস ভাড়া কত?</div>
-        <p class="faq-a">রাজশাহী থেকে ঢাকা ওয়ান ওয়ে অথবা রাউন্ড ট্রিপের গাড়ি ও নোয়াহ মাইক্রোবাসের ভাড়া গাড়ির মডেল, সময় এবং বর্তমান জ্বালানি খরচের উপর ভিত্তি করে সাশ্রয়ী রেটে নির্ধারিত হয়। বর্তমান রেট জানতে সরাসরি কল করুন ০১৭৬১-২৮০০৩১ অথবা হোয়াটসঅ্যাপে মেসেজ দিন ০১৭৫৫-৯৬৪৮৭১ নম্বরে।</p>
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> গাড়ির ভাড়া কত এবং কীভাবে নির্ধারিত হয়?</div>
+        <p class="faq-a">আমাদের গাড়ির ভাড়া স্থান, গন্তব্য, দূরত্ব ও আলোচনা সাপেক্ষে নির্ধারিত হয়। সবচেয়ে সাশ্রয়ী ও সঠিক ভাড়া জানতে আপনার পিকআপ ও ড্রপ লোকেশন উল্লেখ করে সরাসরি আমাদের WhatsApp (০১৭৫৫-৯৬৪৮৭১) নম্বরে মেসেজ দিন বা হটলাইনে কল করুন।</p>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> আব্দুল্লাহ রেন্ট-এ-কারে কি কি গাড়ি পাওয়া যায়?</div>
-        <p class="faq-a">আমাদের কাছে সেডান (Toyota Premio, Allion, Axio, Corolla), এসইউভি (Toyota Prado, Pajero) এবং ৭-১২ সিটের নোয়াহ / হাইয়েস মাইক্রোবাস (Noah / Hiace Microbus) সার্বক্ষণিক প্রস্তুত থাকে।</p>
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> আপনাদের প্রধান সার্ভিস কোনটি এবং অন্য গাড়ি পাওয়া যাবে কি?</div>
+        <p class="faq-a">টয়োটা নোয়াহ (Toyota Noah) মাইক্রোবাস আমাদের মূল ও প্রধান সার্ভিস। এছাড়া আপনার প্রয়োজন ও চাহিদা অনুযায়ী সেডান (প্রাইভেট কার), এসইউভি (জিপ) সহ যেকোনো গাড়ির দ্রুত ব্যবস্থা করা হয়।</p>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="q-badge">প্রশ্ন</span> গাড়ির সাথে কি অভিজ্ঞ ড্রাইভার অন্তর্ভুক্ত থাকে?</div>
