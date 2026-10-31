@@ -1,207 +1,390 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Abdullah Rent-A-Car</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Noto+Sans+Bengali:wght@400;600&display=swap">
-<style>
-/* Layout concept: one calm column. Big car photo first, then short sections with plenty of air.
-   Type is a single family at light weights; navy and amber come from the logo. */
-:root{
-  --bg:#F4F6FA;
-  --surface:#FFFFFF;
-  --panel:#E9EEF5;
-  --panel-2:#DDE4EE;
-  --ink:#0B1626;
-  --ink-2:#5A6A80;
-  --line:#DCE3EC;
-  --amber:#FFB800;
-  --amber-ink:#8A5F00;
-  --on-navy:#F4F6FA;
-  --on-navy-2:#A9B6C8;
-  --navy-line:#22324A;
-  --wa:#138A48;
-  --glass:#C9D9E8;
-  --ground:rgba(11,22,38,.10);
-  --bg-glass:rgba(244,246,250,.92);
-  --f:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --gutter:16px;
-  --r-lg:26px; --r-md:18px;
-  color-scheme:light;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--f);-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg-glass)}
-img,svg{max-width:100%}
-a{color:inherit}
-h1,h2,h3,p,ul{margin:0}
-ul{padding:0;list-style:none}
-:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
-section[id]{scroll-margin-top:76px}
-.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
-@media (min-width:720px){:root{--gutter:28px}}
-.ic{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rent a Car in Rajshahi | Abdullah Rent-A-Car (আব্দুল্লাহ রেন্ট এ কার) - Open 24/7</title>
+  <meta name="description" content="Rent a car in Rajshahi (রাজশাহীতে গাড়ি ভাড়া). Sedan, SUV, Noah microbus for city rides, weddings, airport transfer, corporate & Rajshahi to Dhaka trips. Open 24/7. Call 01761-280031.">
+  <meta name="keywords" content="rent a car rajshahi, রাজশাহীতে গাড়ি ভাড়া, car rental rajshahi, রেন্ট এ কার রাজশাহী, noah rent rajshahi, rajshahi to dhaka car rent, মাইক্রোবাস ভাড়া রাজশাহী, বিয়ের গাড়ি ভাড়া রাজশাহী, abdullah rent a car, রাজশাহী রেন্ট এ কার">
+  <meta name="author" content="Abdullah Rent-A-Car">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://abdullahrentacar.com/">
 
-.eyebrow{font:600 .74rem/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--amber-ink)}
-.h2{font:600 clamp(1.5rem,2.8vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em;text-wrap:balance}
-.lede{color:var(--ink-2);max-width:56ch;text-wrap:pretty}
-.sec{padding-block:clamp(52px,7vw,88px) 0}
-.sec__head{display:grid;gap:10px;margin-bottom:clamp(20px,3vw,32px)}
+  <!-- Geo Local SEO Tags -->
+  <meta name="geo.region" content="BD-54">
+  <meta name="geo.placename" content="Shalbagan, Sopura, Rajshahi, Bangladesh">
+  <meta name="geo.position" content="24.3850;88.6050">
+  <meta name="ICBM" content="24.3850, 88.6050">
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.7rem 1.3rem;border-radius:999px;border:0;background:var(--ink);color:#fff;font:600 .95rem/1 var(--f);text-decoration:none;cursor:pointer;transition:transform .18s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn--wa{background:var(--wa)}
-.btn--amber{background:var(--amber);color:var(--ink)}
-.btn--sm{min-height:38px;padding:.5rem 1rem;font-size:.9rem}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Abdullah Rent-A-Car">
+  <meta property="og:url" content="https://abdullahrentacar.com/">
+  <meta property="og:title" content="Rent a Car in Rajshahi | Abdullah Rent-A-Car (আব্দুল্লাহ রেন্ট এ কার)">
+  <meta property="og:description" content="Safe ride, comfort journey. Rent Sedan, SUV, Noah microbus in Rajshahi 24/7. Call 01761-280031 or WhatsApp 01755-964871.">
+  <meta property="og:image" content="https://abdullahrentacar.com/img/hero.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:locale:alternate" content="en_US">
 
-/* header */
-.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.hdr .wrap{display:flex;align-items:center;gap:18px;min-height:60px}
-.brand{display:block;flex:none;line-height:0}
-.brand img{height:38px;width:auto;display:block}
-.nav{display:none;margin-left:auto;gap:2px}
-.nav a{padding:.45rem .8rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;color:var(--ink-2)}
-.nav a:hover{background:var(--panel);color:var(--ink)}
-.hdr__cta{margin-left:auto;display:flex;gap:8px;align-items:center}
-.menu-btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:0;background:var(--panel);cursor:pointer;color:var(--ink)}
-@media (min-width:900px){.nav{display:flex}.hdr__cta{margin-left:0}.menu-btn{display:none}}
-.drawer{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 30px 40px -30px rgba(11,22,38,.4)}
-.drawer.open{display:block}
-.drawer .wrap{display:block;min-height:0;padding-block:4px 16px}
-.drawer .lnk{display:flex;justify-content:space-between;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500}
-.drawer .lnk .ic{color:var(--ink-2)}
-.drawer__cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
-@media (min-width:900px){.drawer{display:none!important}}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://abdullahrentacar.com/">
+  <meta name="twitter:title" content="Rent a Car in Rajshahi | Abdullah Rent-A-Car">
+  <meta name="twitter:description" content="Rent Sedan, SUV, Noah microbus in Rajshahi for city, wedding, airport & Dhaka routes. Open 24/7.">
+  <meta name="twitter:image" content="https://abdullahrentacar.com/img/hero.jpg">
 
-/* hero */
-.hero{padding-top:12px}
-.stage{position:relative}
-.stage__img{overflow:hidden;border-radius:var(--r-lg);aspect-ratio:4/5;background:var(--panel-2)}
-.stage__img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:settle 1.5s cubic-bezier(.2,.7,.2,1) both}
-@keyframes settle{from{transform:scale(1.04)}to{transform:scale(1)}}
-@media (min-width:700px){.stage__img{aspect-ratio:2/1}}
-.hero-cta{position:relative;z-index:2;margin:-40px 10px 0}
-.hero-cta__in{display:grid;gap:8px;padding:8px;border-radius:24px;background:var(--surface);box-shadow:0 1px 0 var(--line),0 24px 50px -26px rgba(11,22,38,.5)}
-@media (min-width:640px){.hero-cta__in{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1000px){
-  .hero-cta{position:absolute;left:22px;right:22px;bottom:22px;margin:0;pointer-events:none}
-  .hero-cta__in{display:flex;justify-content:space-between;padding:0;background:none;box-shadow:none;border-radius:0}
-  .hero-cta .bigbtn{width:260px;pointer-events:auto;box-shadow:0 18px 36px -16px rgba(0,0,0,.55)}
-}
-.bigbtn{display:flex;align-items:center;gap:12px;padding:9px 16px 9px 9px;border-radius:18px;background:var(--ink);color:#fff;text-decoration:none;transition:transform .18s ease}
-.bigbtn:hover{transform:translateY(-2px)}
-.bigbtn--amber{background:var(--amber);color:var(--ink)}
-.bigbtn--wa{background:var(--wa)}
-.bigbtn .badge{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;flex:none;background:var(--ink);color:var(--amber)}
-.bigbtn--wa .badge{background:#fff;color:var(--wa)}
-.bigbtn small{display:block;font:500 .72rem/1 var(--f);letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:4px}
-.bigbtn strong{display:block;font:600 1.02rem/1 var(--f);letter-spacing:.02em;font-variant-numeric:tabular-nums}
-.bigbtn .go{margin-left:auto;opacity:.75}
+  <!-- Icons & Web Manifest -->
+  <link rel="icon" type="image/svg+xml" href="img/logo-on-light.svg">
+  <link rel="apple-touch-icon" href="img/logo-on-light.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0B1626">
 
-.intro{display:grid;gap:10px;justify-items:center;text-align:center;margin-top:clamp(26px,4vw,40px)}
-.hero h1{font:600 clamp(1.5rem,3vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em}
-.hero .lede{font-size:1rem}
-.gmb-pill{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:9px 16px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.9rem}
-.gmb-pill:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
-.gmb-pill .ic{width:18px;height:18px;color:var(--amber-ink)}
+  <!-- Fonts & Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
 
-/* services */
-.svc{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (min-width:640px){.svc{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:1000px){.svc{grid-template-columns:repeat(5,minmax(0,1fr))}}
-.tile-s{display:flex;align-items:center;gap:11px;min-width:0;padding:12px 14px;border-radius:16px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.93rem;line-height:1.25;transition:box-shadow .18s ease,transform .18s ease}
-.tile-s:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1.5px var(--ink)}
-.tile-s .ico{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:11px;background:var(--panel)}
-.tile-s .ico .ic{width:19px;height:19px}
-.tile-s.hot{background:var(--ink);color:var(--on-navy);box-shadow:none}
-.tile-s.hot .ico{background:var(--amber);color:var(--ink)}
-.note{margin-top:14px;font-size:.88rem;color:var(--ink-2)}
+  <!-- JSON-LD Structured Data for Local SEO & Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["AutoRental", "LocalBusiness"],
+        "@id": "https://abdullahrentacar.com/#business",
+        "name": "Abdullah Rent-A-Car",
+        "alternateName": [
+          "আব্দুল্লাহ রেন্ট এ কার",
+          "Abdullah Rent A Car Rajshahi",
+          "রাজশাহীতে গাড়ি ভাড়া - আব্দুল্লাহ রেন্ট-এ-কার"
+        ],
+        "url": "https://abdullahrentacar.com/",
+        "logo": "https://abdullahrentacar.com/img/logo-on-light.svg",
+        "image": "https://abdullahrentacar.com/img/hero.jpg",
+        "description": "Best car rental service in Rajshahi. Sedan, SUV, Noah microbus available for daily/monthly rent, weddings, airport transfer & Rajshahi to Dhaka trips. Open 24/7.",
+        "telephone": "+8801761280031",
+        "priceRange": "$$",
+        "currenciesAccepted": "BDT",
+        "paymentAccepted": "Cash, bKash, Nagad, Bank Transfer",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shalbagan, Sopura",
+          "addressLocality": "Rajshahi",
+          "addressRegion": "Rajshahi Division",
+          "postalCode": "6203",
+          "addressCountry": "BD"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.3850,
+          "longitude": 88.6050
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "areaServed": [
+          {"@type": "City", "name": "Rajshahi"},
+          {"@type": "City", "name": "Dhaka"},
+          {"@type": "AdministrativeArea", "name": "Natore"},
+          {"@type": "AdministrativeArea", "name": "Naogaon"},
+          {"@type": "AdministrativeArea", "name": "Bogura"},
+          {"@type": "AdministrativeArea", "name": "Pabna"},
+          {"@type": "AdministrativeArea", "name": "Chapainawabganj"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Car Rental Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rajshahi to Dhaka Car Rental"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Noah Microbus Rental in Rajshahi"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wedding Car Rental Rajshahi"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Airport Transfer Rajshahi"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Daily Car Rental"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monthly Car Rental"}}
+          ]
+        },
+        "hasMap": "https://share.google/MZHHuM2Co3DIEhM1e",
+        "sameAs": [
+          "https://share.google/MZHHuM2Co3DIEhM1e",
+          "https://wa.me/8801755964871"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://abdullahrentacar.com/#website",
+        "url": "https://abdullahrentacar.com/",
+        "name": "Abdullah Rent-A-Car Rajshahi",
+        "inLanguage": ["bn-BD", "en-US"],
+        "publisher": {"@id": "https://abdullahrentacar.com/#business"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://abdullahrentacar.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "রাজশাহী থেকে ঢাকা গাড়ি বা নোয়াহ মাইক্রোবাস ভাড়া কত?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "রাজশাহী থেকে ঢাকা ওয়ান ওয়ে অথবা রাউন্ড ট্রিপের গাড়ি ও নোয়াহ মাইক্রোবাসের ভাড়া গাড়ির মডেল, সময় এবং বর্তমান জ্বালানি খরচের উপর ভিত্তি করে সাশ্রয়ী রেটে নির্ধারিত হয়। বর্তমান রেট জানতে সরাসরি কল করুন ০১৭৬১-২৮০০৩১ অথবা হোয়াটসঅ্যাপে মেসেজ দিন ০১৭৫৫-৯৬৪৮৭১ নম্বরে।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "আব্দুল্লাহ রেন্ট-এ-কারে কি কি গাড়ি পাওয়া যায়?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "আমাদের কাছে সেডান (Toyota Premio, Allion, Axio, Corolla), এসইউভি (Toyota Prado, Pajero) এবং ৭-১২ সিটের নোয়াহ / হাইয়েস মাইক্রোবাস (Noah / Hiace Microbus) সার্বক্ষণিক প্রস্তুত থাকে।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "গাড়ির সাথে কি অভিজ্ঞ ড্রাইভার অন্তর্ভুক্ত থাকে?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "হ্যাঁ, প্রতিটি ট্রিপের জন্য দক্ষ, লাইসেন্সধারী ও অত্যন্ত বিনয়ী ড্রাইভার প্রদান করা হয় যাতে আপনার এবং আপনার পরিবারের ভ্রমণ নিরাপদ ও আরামদায়ক হয়।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "কীভাবে অগ্রিম গাড়ি বুকিং করা যাবে?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "আমাদের হটলাইন ০১৭৬১-২৮০০৩১ অথবা হোয়াটসঅ্যাপ ০১৭৫৫-৯৬৪৮৭১ নম্বরে আপনার পিকআপের ঠিকানা, সময় ও গন্তব্য জানালেই কোনো ঝামেলা ছাড়াই গাড়ি নিশ্চিত করা হয়।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "আপনারা কি ২৪ ঘণ্টা সার্ভিস দেন?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "হ্যাঁ, আমরা সপ্তাহে ৭ দিন ২৪ ঘণ্টাই সার্ভিস প্রদান করি। ভোরবেলার ফ্লাইট বা গভীর রাতের জরুরি যাত্রাতেও আমাদের কল করতে পারেন।"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
-/* fleet */
-.fleet-grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
-@media (min-width:860px){.fleet-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.car{display:flex;flex-direction:column;gap:14px;padding:12px 12px 18px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);min-width:0}
-.car__media{position:relative;aspect-ratio:5/4;border-radius:12px;background:var(--panel-2);overflow:hidden;display:grid;place-items:center}
-.car__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
-.car__media svg.art{width:88%;height:auto}
-.car__body{display:grid;gap:8px;padding-inline:6px}
-.car h3{font:600 1.2rem/1.2 var(--f)}
-.car p{color:var(--ink-2);font-size:.94rem}
-.car .btn{margin-top:6px;justify-self:start}
-.art .body{fill:var(--surface);stroke:var(--ink);stroke-width:3.5;stroke-linejoin:round}
-.art .win{fill:var(--glass);stroke:var(--ink);stroke-width:3;stroke-linejoin:round}
-.art .sw{fill:none;stroke:var(--amber);stroke-width:5;stroke-linecap:round}
-.art .arch{fill:var(--panel-2)}
-.art .tire{fill:var(--ink)}
-.art .hub{fill:var(--surface);stroke:var(--ink);stroke-width:3}
-.art .gnd{fill:var(--ground)}
+  <style>
+    :root{
+      color-scheme:light;
+      box-sizing:border-box;
+      padding-top:env(safe-area-inset-top,0px);
+      padding-bottom:env(safe-area-inset-bottom,0px);
+      --bg:#F4F6FA;
+      --surface:#FFFFFF;
+      --panel:#E9EEF5;
+      --panel-2:#DDE4EE;
+      --ink:#0B1626;
+      --ink-2:#5A6A80;
+      --line:#DCE3EC;
+      --amber:#FFB800;
+      --amber-ink:#8A5F00;
+      --on-navy:#F4F6FA;
+      --on-navy-2:#A9B6C8;
+      --navy-line:#22324A;
+      --wa:#138A48;
+      --glass:#C9D9E8;
+      --ground:rgba(11,22,38,.10);
+      --bg-glass:rgba(244,246,250,.92);
+      --f:'Figtree','Hind Siliguri',system-ui,-apple-system,'Segoe UI',sans-serif;
+      --gutter:16px;
+      --r-lg:26px; --r-md:18px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+    body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--f);-webkit-font-smoothing:antialiased}
+    body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg-glass)}
+    img,svg{max-width:100%}
+    [hidden]:not([hidden=until-found i]){display:none!important}
+    a{color:inherit}
+    h1,h2,h3,p,ul{margin:0}
+    ul{padding:0;list-style:none}
+    :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
+    section[id]{scroll-margin-top:76px}
+    .wrap{width:100%;max-width:1180px;margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+    @media (min-width:720px){:root{--gutter:28px}}
+    .ic{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-/* why */
-.why{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
-@media (min-width:640px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1000px){.why{grid-template-columns:repeat(4,minmax(0,1fr))}}
-.wy{display:grid;gap:8px;align-content:start;padding:20px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
-.wy .ico{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--panel)}
-.wy h3{font:600 1.05rem/1.25 var(--f)}
-.wy p{font-size:.92rem;color:var(--ink-2)}
+    .eyebrow{font:600 .74rem/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--amber-ink)}
+    .h2{font:600 clamp(1.5rem,2.8vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em;text-wrap:balance}
+    .lede{color:var(--ink-2);max-width:56ch;text-wrap:pretty}
+    .sec{padding-block:clamp(52px,7vw,88px) 0}
+    .sec__head{display:grid;gap:10px;margin-bottom:clamp(20px,3vw,32px)}
 
-/* area */
-.routes{display:grid;gap:22px;padding:clamp(14px,2.4vw,26px);border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
-@media (min-width:960px){.routes{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:32px;align-items:stretch}}
-.map{display:flex;align-items:center;border-radius:var(--r-md);background:var(--bg);padding:10px 8px 14px}
-.map svg{display:block;width:100%;height:auto;font-family:var(--f)}
-.map text{fill:var(--ink);font-size:15px;font-weight:500}
-.map text.dhaka{fill:var(--amber-ink);font-size:18px;font-weight:600}
-.map text.hub{font-size:18px;font-weight:600}
-.map .cap{fill:var(--ink-2);font-size:11px;letter-spacing:.08em}
-.map .spoke{stroke:var(--ink-2);stroke-width:1.6;stroke-dasharray:3 6;stroke-linecap:round;fill:none;opacity:.7}
-.map .main{stroke:var(--amber);stroke-width:4;stroke-dasharray:2 9;stroke-linecap:round;fill:none;animation:march 1.4s linear infinite}
-@keyframes march{to{stroke-dashoffset:-22}}
-.map .node{fill:var(--surface);stroke:var(--ink);stroke-width:2.5}
-.map .hubdot{fill:var(--amber);stroke:var(--ink);stroke-width:3}
-.map .pulse{fill:none;stroke:var(--amber);stroke-width:2.5;transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
-@keyframes pulse{from{transform:scale(1);opacity:.9}to{transform:scale(2.6);opacity:0}}
-.rlist{display:grid;gap:8px;align-content:center}
-.rlist a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:var(--bg);text-decoration:none;font-weight:500;font-size:.95rem;transition:background .18s ease}
-.rlist a:hover{background:var(--panel)}
-.rlist .ic{width:18px;height:18px;color:var(--amber-ink)}
-.rlist .go{margin-left:auto;color:var(--ink-2)}
-.rlist li.top a{background:var(--ink);color:var(--on-navy)}
-.rlist li.top .ic{color:var(--amber)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.7rem 1.3rem;border-radius:999px;border:0;background:var(--ink);color:#fff;font:600 .95rem/1 var(--f);text-decoration:none;cursor:pointer;transition:transform .18s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn--wa{background:var(--wa)}
+    .btn--amber{background:var(--amber);color:var(--ink)}
+    .btn--sm{min-height:38px;padding:.5rem 1rem;font-size:.9rem}
 
-/* contact */
-.contact{margin-top:clamp(52px,7vw,88px);background:var(--ink);color:var(--on-navy)}
-.contact__in{display:grid;gap:26px;padding-block:clamp(40px,6vw,64px)}
-@media (min-width:900px){.contact__in{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:56px}}
-.contact h2{font:600 clamp(1.5rem,2.8vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em}
-.contact p.lede{color:var(--on-navy-2);margin-top:10px}
-.contact .meta{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.92rem;color:var(--on-navy-2)}
-.contact .meta .ic{color:var(--amber);width:18px;height:18px}
-.contact__btns{display:grid;gap:10px;min-width:min(100%,320px)}
-.contact .bigbtn{padding:12px 18px 12px 12px}
-.contact .bigbtn strong{font-size:1.08rem}
-.contact .bigbtn .badge{width:42px;height:42px}
-.gmb{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px var(--navy-line);color:var(--on-navy);text-decoration:none;font-weight:500;font-size:.95rem}
-.gmb:hover{background:rgba(255,255,255,.13)}
-.gmb .ic{width:18px;height:18px;color:var(--amber)}
-.bn{font-family:'Noto Sans Bengali',var(--f)}
-.intro .bn{color:var(--ink-2);font-size:.95rem}
-.contact .about{margin-top:12px;font-size:.88rem;color:var(--on-navy-2);max-width:62ch;line-height:1.7}
-.legal{border-top:1px solid var(--navy-line);padding-block:16px;font-size:.82rem;color:var(--on-navy-2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px}
-@media (max-width:759px){.legal{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+    /* header */
+    .hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .hdr .wrap{display:flex;align-items:center;gap:18px;min-height:60px}
+    .brand{display:block;flex:none;line-height:0}
+    .brand img{height:38px;width:auto;display:block}
+    .nav{display:none;margin-left:auto;gap:2px}
+    .nav a{padding:.45rem .8rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;color:var(--ink-2)}
+    .nav a:hover{background:var(--panel);color:var(--ink)}
+    .hdr__cta{margin-left:auto;display:flex;gap:8px;align-items:center}
+    .menu-btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:0;background:var(--panel);cursor:pointer;color:var(--ink)}
+    @media (min-width:900px){.nav{display:flex}.hdr__cta{margin-left:0}.menu-btn{display:none}}
+    .drawer{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 30px 40px -30px rgba(11,22,38,.4)}
+    .drawer.open{display:block}
+    .drawer .wrap{display:block;min-height:0;padding-block:4px 16px}
+    .drawer .lnk{display:flex;justify-content:space-between;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500}
+    .drawer .lnk .ic{color:var(--ink-2)}
+    .drawer__cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+    @media (min-width:900px){.drawer{display:none!important}}
 
-/* mobile dock */
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:25;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px max(var(--gutter),env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(var(--gutter),env(safe-area-inset-left,0px));background:var(--bg-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .25s ease}
-.dock.is-hidden{transform:translateY(115%)}
-.dock .btn{min-height:48px}
-@media (min-width:760px){.dock{display:none}}
+    /* hero */
+    .hero{padding-top:12px}
+    .stage{position:relative}
+    .stage__img{overflow:hidden;border-radius:var(--r-lg);aspect-ratio:4/5;background:var(--panel-2)}
+    .stage__img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:settle 1.5s cubic-bezier(.2,.7,.2,1) both}
+    @keyframes settle{from{transform:scale(1.04)}to{transform:scale(1)}}
+    @media (min-width:700px){.stage__img{aspect-ratio:2/1}}
+    .hero-cta{position:relative;z-index:2;margin:-40px 10px 0}
+    .hero-cta__in{display:grid;gap:8px;padding:8px;border-radius:24px;background:var(--surface);box-shadow:0 1px 0 var(--line),0 24px 50px -26px rgba(11,22,38,.5)}
+    @media (min-width:640px){.hero-cta__in{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (min-width:1000px){
+      .hero-cta{position:absolute;left:22px;right:22px;bottom:22px;margin:0;pointer-events:none}
+      .hero-cta__in{display:flex;justify-content:space-between;padding:0;background:none;box-shadow:none;border-radius:0}
+      .hero-cta .bigbtn{width:260px;pointer-events:auto;box-shadow:0 18px 36px -16px rgba(0,0,0,.55)}
+    }
+    .bigbtn{display:flex;align-items:center;gap:12px;padding:9px 16px 9px 9px;border-radius:18px;background:var(--ink);color:#fff;text-decoration:none;transition:transform .18s ease}
+    .bigbtn:hover{transform:translateY(-2px)}
+    .bigbtn--amber{background:var(--amber);color:var(--ink)}
+    .bigbtn--wa{background:var(--wa)}
+    .bigbtn .badge{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;flex:none;background:var(--ink);color:var(--amber)}
+    .bigbtn--wa .badge{background:#fff;color:var(--wa)}
+    .bigbtn small{display:block;font:500 .72rem/1 var(--f);letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:4px}
+    .bigbtn strong{display:block;font:600 1.02rem/1 var(--f);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+    .bigbtn .go{margin-left:auto;opacity:.75}
 
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none!important;transition:none!important}
-}
-</style>
+    .intro{display:grid;gap:10px;justify-items:center;text-align:center;margin-top:clamp(26px,4vw,40px)}
+    .hero h1{font:700 clamp(1.6rem,3.2vw,2.3rem)/1.2 var(--f);letter-spacing:-.01em}
+    .hero .lede{font-size:1.05rem}
+    .gmb-pill{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:9px 16px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.9rem}
+    .gmb-pill:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+    .gmb-pill .ic{width:18px;height:18px;color:var(--amber-ink)}
+
+    /* services */
+    .svc{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (min-width:640px){.svc{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media (min-width:1000px){.svc{grid-template-columns:repeat(5,minmax(0,1fr))}}
+    .tile-s{display:flex;align-items:center;gap:11px;min-width:0;padding:12px 14px;border-radius:16px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:500;font-size:.93rem;line-height:1.25;transition:box-shadow .18s ease,transform .18s ease}
+    .tile-s:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1.5px var(--ink)}
+    .tile-s .ico{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:11px;background:var(--panel)}
+    .tile-s .ico .ic{width:19px;height:19px}
+    .tile-s.hot{background:var(--ink);color:var(--on-navy);box-shadow:none}
+    .tile-s.hot .ico{background:var(--amber);color:var(--ink)}
+    .note{margin-top:14px;font-size:.88rem;color:var(--ink-2)}
+
+    /* fleet */
+    .fleet-grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+    @media (min-width:860px){.fleet-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .car{display:flex;flex-direction:column;gap:14px;padding:12px 12px 18px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);min-width:0}
+    .car__media{position:relative;aspect-ratio:5/4;border-radius:12px;background:var(--panel-2);overflow:hidden;display:grid;place-items:center}
+    .car__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+    .car__media svg.art{width:88%;height:auto}
+    .car__body{display:grid;gap:8px;padding-inline:6px}
+    .car h3{font:600 1.2rem/1.2 var(--f)}
+    .car p{color:var(--ink-2);font-size:.94rem}
+    .car .btn{margin-top:6px;justify-self:start}
+    .art .body{fill:var(--surface);stroke:var(--ink);stroke-width:3.5;stroke-linejoin:round}
+    .art .win{fill:var(--glass);stroke:var(--ink);stroke-width:3;stroke-linejoin:round}
+    .art .sw{fill:none;stroke:var(--amber);stroke-width:5;stroke-linecap:round}
+    .art .arch{fill:var(--panel-2)}
+    .art .tire{fill:var(--ink)}
+    .art .hub{fill:var(--surface);stroke:var(--ink);stroke-width:3}
+    .art .gnd{fill:var(--ground)}
+
+    /* why */
+    .why{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+    @media (min-width:640px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (min-width:1000px){.why{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    .wy{display:grid;gap:8px;align-content:start;padding:20px;border-radius:var(--r-md);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+    .wy .ico{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--panel)}
+    .wy h3{font:600 1.05rem/1.25 var(--f)}
+    .wy p{font-size:.92rem;color:var(--ink-2)}
+
+    /* area */
+    .routes{display:grid;gap:22px;padding:clamp(14px,2.4vw,26px);border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+    @media (min-width:960px){.routes{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:32px;align-items:stretch}}
+    .map{display:flex;align-items:center;border-radius:var(--r-md);background:var(--bg);padding:10px 8px 14px}
+    .map svg{display:block;width:100%;height:auto;font-family:var(--f)}
+    .map text{fill:var(--ink);font-size:15px;font-weight:500}
+    .map text.dhaka{fill:var(--amber-ink);font-size:18px;font-weight:600}
+    .map text.hub{font-size:18px;font-weight:600}
+    .map .cap{fill:var(--ink-2);font-size:11px;letter-spacing:.08em}
+    .map .spoke{stroke:var(--ink-2);stroke-width:1.6;stroke-dasharray:3 6;stroke-linecap:round;fill:none;opacity:.7}
+    .map .main{stroke:var(--amber);stroke-width:4;stroke-dasharray:2 9;stroke-linecap:round;fill:none;animation:march 1.4s linear infinite}
+    @keyframes march{to{stroke-dashoffset:-22}}
+    .map .node{fill:var(--surface);stroke:var(--ink);stroke-width:2.5}
+    .map .hubdot{fill:var(--amber);stroke:var(--ink);stroke-width:3}
+    .map .pulse{fill:none;stroke:var(--amber);stroke-width:2.5;transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+    @keyframes pulse{from{transform:scale(1);opacity:.9}to{transform:scale(2.6);opacity:0}}
+    .rlist{display:grid;gap:8px;align-content:center}
+    .rlist a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:var(--bg);text-decoration:none;font-weight:500;font-size:.95rem;transition:background .18s ease}
+    .rlist a:hover{background:var(--panel)}
+    .rlist .ic{width:18px;height:18px;color:var(--amber-ink)}
+    .rlist .go{margin-left:auto;color:var(--ink-2)}
+    .rlist li.top a{background:var(--ink);color:var(--on-navy)}
+    .rlist li.top .ic{color:var(--amber)}
+
+    /* FAQ section */
+    .faq-list{display:grid;gap:14px}
+    .faq-item{background:var(--surface);border-radius:var(--r-md);box-shadow:inset 0 0 0 1px var(--line);padding:22px;transition:box-shadow .2s ease}
+    .faq-item:hover{box-shadow:inset 0 0 0 1.5px var(--amber)}
+    .faq-q{font:600 1.1rem/1.35 var(--f);color:var(--ink);margin-bottom:10px;display:flex;align-items:flex-start;gap:12px}
+    .faq-q .q-badge{background:var(--panel);color:var(--amber-ink);font-size:.78rem;font-weight:700;padding:3px 9px;border-radius:6px;flex:none;margin-top:2px}
+    .faq-a{color:var(--ink-2);font-size:.96rem;line-height:1.65}
+
+    /* contact */
+    .contact{margin-top:clamp(52px,7vw,88px);background:var(--ink);color:var(--on-navy)}
+    .contact__in{display:grid;gap:26px;padding-block:clamp(40px,6vw,64px)}
+    @media (min-width:900px){.contact__in{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:56px}}
+    .contact h2{font:600 clamp(1.5rem,2.8vw,2.1rem)/1.2 var(--f);letter-spacing:-.01em}
+    .contact p.lede{color:var(--on-navy-2);margin-top:10px}
+    .contact .meta{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.92rem;color:var(--on-navy-2)}
+    .contact .meta .ic{color:var(--amber);width:18px;height:18px}
+    .contact__btns{display:grid;gap:10px;min-width:min(100%,320px)}
+    .contact .bigbtn{padding:12px 18px 12px 12px}
+    .contact .bigbtn strong{font-size:1.08rem}
+    .contact .bigbtn .badge{width:42px;height:42px}
+    .gmb{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px var(--navy-line);color:var(--on-navy);text-decoration:none;font-weight:500;font-size:.95rem}
+    .gmb:hover{background:rgba(255,255,255,.13)}
+    .gmb .ic{width:18px;height:18px;color:var(--amber)}
+    .bn, [lang="bn"], .faq-q, .faq-a{font-family:'Hind Siliguri',var(--f)}
+    .intro .bn{color:var(--ink-2);font-size:.98rem;font-weight:500}
+    .contact .about{margin-top:12px;font-size:.88rem;color:var(--on-navy-2);max-width:62ch;line-height:1.7}
+    .legal{border-top:1px solid var(--navy-line);padding-block:16px;font-size:.82rem;color:var(--on-navy-2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px}
+    @media (max-width:759px){.legal{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+
+    /* mobile dock */
+    .dock{position:fixed;left:0;right:0;bottom:0;z-index:25;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px max(var(--gutter),env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(var(--gutter),env(safe-area-inset-left,0px));background:var(--bg-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .25s ease}
+    .dock.is-hidden{transform:translateY(115%)}
+    .dock .btn{min-height:48px}
+    @media (min-width:760px){.dock{display:none}}
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
@@ -228,12 +411,15 @@ section[id]{scroll-margin-top:76px}
 
 <header class="hdr" id="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Abdullah Rent-A-Car, home"><img src="img/logo-on-light.svg" alt="Abdullah Rent-A-Car" width="91" height="38"></a>
-    <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Abdullah Rent-A-Car Rajshahi, Home">
+      <img src="img/logo-on-light.svg" alt="Abdullah Rent-A-Car Logo" width="91" height="38">
+    </a>
+    <nav class="nav" aria-label="Main Navigation">
       <a href="#services">Services</a>
       <a href="#fleet">Our cars</a>
       <a href="#why">Why us</a>
       <a href="#areas">Service area</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="hdr__cta">
@@ -247,6 +433,7 @@ section[id]{scroll-margin-top:76px}
       <a class="lnk" href="#fleet">Our cars <svg class="ic"><use href="#i-arrow"/></svg></a>
       <a class="lnk" href="#why">Why us <svg class="ic"><use href="#i-arrow"/></svg></a>
       <a class="lnk" href="#areas">Service area <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="lnk" href="#faq">FAQ <svg class="ic"><use href="#i-arrow"/></svg></a>
       <a class="lnk" href="#contact">Contact <svg class="ic"><use href="#i-arrow"/></svg></a>
       <div class="drawer__cta">
         <a class="btn btn--amber" href="tel:+8801761280031"><svg class="ic"><use href="#i-phone"/></svg>Call now</a>
@@ -261,7 +448,7 @@ section[id]{scroll-margin-top:76px}
   <div class="wrap">
     <div class="stage">
       <div class="stage__img">
-        <img src="img/hero.jpg" alt="Abdullah Rent-A-Car, car rental in Rajshahi. White Toyota Noah microbus on a country road at sunrise, with Sedan, SUV, Noah / Microbus and 24/7 service options" width="2098" height="749" fetchpriority="high">
+        <img src="img/hero.jpg" alt="Abdullah Rent-A-Car, car rental in Rajshahi. White Toyota Noah microbus on road at sunrise for rent" width="2098" height="749" fetchpriority="high">
       </div>
       <div class="hero-cta">
         <div class="hero-cta__in">
@@ -280,8 +467,8 @@ section[id]{scroll-margin-top:76px}
     </div>
     <div class="intro">
       <h1>Rent a car in Rajshahi</h1>
-      <p class="lede">Safe ride. Better journey. Sedan, SUV and Noah microbus on rent, open 24/7.</p>
-      <p class="bn" lang="bn">রাজশাহীতে গাড়ি ভাড়া · ২৪ ঘণ্টা সার্ভিস</p>
+      <p class="lede">Safe ride. Comfort journey. Sedan, SUV and Noah microbus for rent in Rajshahi, open 24/7.</p>
+      <p class="bn" lang="bn">রাজশাহীতে গাড়ি ভাড়া · নিরাপদ ভ্রমণ ও নির্ভরযোগ্য সার্ভিস · ২৪ ঘণ্টা খোলা</p>
       <a class="gmb-pill" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Find us on Google Maps</a>
     </div>
   </div>
@@ -291,7 +478,7 @@ section[id]{scroll-margin-top:76px}
   <div class="wrap">
     <div class="sec__head">
       <span class="eyebrow">Our services</span>
-      <h2 class="h2">Car rental services in Rajshahi</h2>
+      <h2 class="h2">Car rental services in Rajshahi (আমাদের সেবাসমূহ)</h2>
     </div>
     <div class="svc">
       <a class="tile-s hot" href="#contact" data-wa="Service: Rajshahi to Dhaka car rental"><span class="ico"><svg class="ic"><use href="#i-route"/></svg></span>Rajshahi to Dhaka</a>
@@ -305,20 +492,20 @@ section[id]{scroll-margin-top:76px}
       <a class="tile-s" href="#contact" data-wa="Service: One way trip"><span class="ico"><svg class="ic"><use href="#i-arrow"/></svg></span>One way trip</a>
       <a class="tile-s" href="#contact" data-wa="Service: Round trip"><span class="ico"><svg class="ic"><use href="#i-repeat"/></svg></span>Round trip</a>
     </div>
-    <p class="note">Tap a service to message us on WhatsApp. Contact us for pricing.</p>
+    <p class="note">যেকোনো সার্ভিসে ক্লিক করে সরাসরি WhatsApp-এ কথা বলুন অথবা কল করুন। দ্রুত বুকিং ও সাশ্রয়ী রেট।</p>
   </div>
 </section>
 
 <section class="sec" id="fleet">
   <div class="wrap">
     <div class="sec__head">
-      <span class="eyebrow">Our cars</span>
+      <span class="eyebrow">Our fleet</span>
       <h2 class="h2">Sedan, SUV and Noah microbus for rent</h2>
     </div>
     <div class="fleet-grid">
       <article class="car">
         <div class="car__media">
-          <svg class="art" viewBox="0 0 360 140" role="img" aria-label="Sedan">
+          <svg class="art" viewBox="0 0 360 140" role="img" aria-label="Sedan Car - Premio, Allion, Axio, Corolla">
             <ellipse class="gnd" cx="180" cy="128" rx="150" ry="7"/>
             <path class="body" d="M24 104 L24 92 C24 85 30 81 40 79 L96 70 C116 48 146 36 182 36 C220 36 250 48 266 68 L306 76 C324 79 334 86 334 95 L334 104 C334 107 331 109 328 109 L30 109 C26 109 24 107 24 104 Z"/>
             <path class="win" d="M108 68 C124 52 148 44 176 43 L176 68 Z"/>
@@ -330,14 +517,14 @@ section[id]{scroll-margin-top:76px}
           </svg>
         </div>
         <div class="car__body">
-          <h3>Sedan</h3>
-          <p>Smooth and economical for city rides, airport runs and small groups.</p>
+          <h3>Sedan (সেডান)</h3>
+          <p>Smooth and economical for city rides, airport runs and small families. Toyota Premio, Allion, Axio & Corolla.</p>
           <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: Sedan"><svg class="ic"><use href="#i-wa"/></svg>Ask about Sedan</a>
         </div>
       </article>
       <article class="car">
         <div class="car__media">
-          <svg class="art" viewBox="0 0 360 140" role="img" aria-label="SUV">
+          <svg class="art" viewBox="0 0 360 140" role="img" aria-label="SUV Car - Prado, Pajero">
             <ellipse class="gnd" cx="180" cy="128" rx="150" ry="7"/>
             <path class="body" d="M24 104 L24 86 C24 78 30 74 40 72 L84 66 L112 36 C115 32 120 30 126 30 L238 30 C245 30 251 32 255 37 L282 68 L318 74 C330 77 336 83 336 92 L336 104 C336 107 333 109 330 109 L30 109 C26 109 24 107 24 104 Z"/>
             <path class="win" d="M124 40 L106 64 L172 64 L172 40 Z"/>
@@ -349,18 +536,18 @@ section[id]{scroll-margin-top:76px}
           </svg>
         </div>
         <div class="car__body">
-          <h3>SUV</h3>
-          <p>Extra room and a higher seat for family trips and longer roads.</p>
+          <h3>SUV (এসইউভি)</h3>
+          <p>Extra room, powerful engine and high ground clearance for VIP journeys, official tours and long trips.</p>
           <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: SUV"><svg class="ic"><use href="#i-wa"/></svg>Ask about SUV</a>
         </div>
       </article>
       <article class="car">
         <div class="car__media">
-          <img src="img/noah.jpg" alt="Toyota Noah microbus for rent in Rajshahi, front view" width="630" height="505">
+          <img src="img/noah.jpg" alt="Toyota Noah microbus for rent in Rajshahi - 7-12 seats" width="630" height="505" loading="lazy">
         </div>
         <div class="car__body">
-          <h3>Noah / Microbus</h3>
-          <p>Room for the whole group, from family tours to wedding guests.</p>
+          <h3>Noah / Microbus (নোয়াহ মাইক্রোবাস)</h3>
+          <p>Spacious 7 to 12 seater microbus for whole families, tourist tours and wedding party transport in Rajshahi.</p>
           <a class="btn btn--wa btn--sm" href="#contact" data-wa="Vehicle: Noah / Microbus"><svg class="ic"><use href="#i-wa"/></svg>Ask about Noah</a>
         </div>
       </article>
@@ -372,13 +559,13 @@ section[id]{scroll-margin-top:76px}
   <div class="wrap">
     <div class="sec__head">
       <span class="eyebrow">Why Abdullah Rent-A-Car</span>
-      <h2 class="h2">Why choose Abdullah Rent-A-Car</h2>
+      <h2 class="h2">কেন আব্দুল্লাহ রেন্ট-এ-কার বেছে নেবেন?</h2>
     </div>
     <div class="why">
-      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Safe Ride</h3><p>Well-kept cars and careful driving on every trip.</p></div>
-      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-heart"/></svg></span><h3>Comfort Journey</h3><p>Clean, comfortable seats and a car sized for your group.</p></div>
-      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>Your Trust</h3><p>Fare and terms are agreed with you before the trip starts.</p></div>
-      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-moon"/></svg></span><h3>Open 24/7</h3><p>Call or message at any hour, early flights and late arrivals included.</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Safe Ride</h3><p>নিয়মিত সার্ভিসিং করা গাড়ি এবং প্রতিটি ট্রিপে অভিজ্ঞ, সতর্ক ও দক্ষ চালক।</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-heart"/></svg></span><h3>Comfort Journey</h3><p>সম্পূর্ণ এসি, পরিষ্কার ও আরামদায়ক সিট যা আপনার দূরপাল্লার ভ্রমণকে আনন্দদায়ক করে।</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>Your Trust</h3><p>কোনো গোপন চার্জ নেই; যাত্রা শুরুর আগেই ন্যায্য ভাড়া এবং শর্তাবলী নিশ্চিত করা হয়।</p></div>
+      <div class="wy"><span class="ico"><svg class="ic"><use href="#i-moon"/></svg></span><h3>Open 24/7</h3><p>২৪ ঘণ্টা যেকোনো সময় কল বা হোয়াটসঅ্যাপে মেসেজ দিন; ভোর বা গভীর রাতের জরুরি যাত্রাতেও প্রস্তুত।</p></div>
     </div>
   </div>
 </section>
@@ -388,7 +575,7 @@ section[id]{scroll-margin-top:76px}
     <div class="sec__head">
       <span class="eyebrow">Service area</span>
       <h2 class="h2">Rajshahi to Dhaka and nearby districts</h2>
-      <p class="lede">Rajshahi, Dhaka, Natore, Naogaon, Bogura, Pabna and Chapainawabganj. Pick a route to message us.</p>
+      <p class="lede">রাজশাহী, ঢাকা, নাটোর, নওগাঁ, বগুড়া, পাবনা ও চাঁপাইনবাবগঞ্জ রুটে নিয়মিত যাতায়াত। গন্তব্য সিলেক্ট করে মেসেজ দিন।</p>
     </div>
     <div class="routes">
       <div class="map">
@@ -422,6 +609,39 @@ section[id]{scroll-margin-top:76px}
     </div>
   </div>
 </section>
+
+<!-- SEO Rich Snippet FAQ Section -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec__head">
+      <span class="eyebrow">Common Questions</span>
+      <h2 class="h2">সচরাচর জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h2>
+      <p class="lede">গাড়ি ভাড়া ও বুকিং সংক্রান্ত আপনার সাধারণ প্রশ্নের উত্তরসমূহ এখানে দেওয়া হলো।</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> রাজশাহী থেকে ঢাকা গাড়ি বা নোয়াহ মাইক্রোবাস ভাড়া কত?</div>
+        <p class="faq-a">রাজশাহী থেকে ঢাকা ওয়ান ওয়ে অথবা রাউন্ড ট্রিপের গাড়ি ও নোয়াহ মাইক্রোবাসের ভাড়া গাড়ির মডেল, সময় এবং বর্তমান জ্বালানি খরচের উপর ভিত্তি করে সাশ্রয়ী রেটে নির্ধারিত হয়। বর্তমান রেট জানতে সরাসরি কল করুন ০১৭৬১-২৮০০৩১ অথবা হোয়াটসঅ্যাপে মেসেজ দিন ০১৭৫৫-৯৬৪৮৭১ নম্বরে।</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> আব্দুল্লাহ রেন্ট-এ-কারে কি কি গাড়ি পাওয়া যায়?</div>
+        <p class="faq-a">আমাদের কাছে সেডান (Toyota Premio, Allion, Axio, Corolla), এসইউভি (Toyota Prado, Pajero) এবং ৭-১২ সিটের নোয়াহ / হাইয়েস মাইক্রোবাস (Noah / Hiace Microbus) সার্বক্ষণিক প্রস্তুত থাকে।</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> গাড়ির সাথে কি অভিজ্ঞ ড্রাইভার অন্তর্ভুক্ত থাকে?</div>
+        <p class="faq-a">হ্যাঁ, প্রতিটি ট্রিপের জন্য দক্ষ, লাইসেন্সধারী ও অত্যন্ত বিনয়ী ড্রাইভার প্রদান করা হয় যাতে আপনার এবং আপনার পরিবারের ভ্রমণ নিরাপদ ও আরামদায়ক হয়।</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> কীভাবে অগ্রিম গাড়ি বুকিং করা যাবে?</div>
+        <p class="faq-a">আমাদের হটলাইন ০১৭৬১-২৮০০৩১ অথবা হোয়াটসঅ্যাপ ০১৭৫৫-৯৬৪৮৭১ নম্বরে আপনার পিকআপের ঠিকানা, সময় ও গন্তব্য জানালেই কোনো ঝামেলা ছাড়াই গাড়ি নিশ্চিত করা হয়।</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">প্রশ্ন</span> আপনারা কি ২৪ ঘণ্টা সার্ভিস দেন?</div>
+        <p class="faq-a">হ্যাঁ, আমরা সপ্তাহে ৭ দিন ২৪ ঘণ্টাই সার্ভিস প্রদান করি। ভোরবেলার ফ্লাইট বা গভীর রাতের জরুরি যাত্রাতেও আমাদের কল করতে পারেন।</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="contact" id="contact">
@@ -440,7 +660,10 @@ section[id]{scroll-margin-top:76px}
         <a class="gmb" href="https://share.google/MZHHuM2Co3DIEhM1e" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Find us on Google Maps</a>
       </div>
     </div>
-    <div class="legal"><span>© 2026 Abdullah Rent-A-Car</span><span>Safe Ride | Comfort Journey | Your Trust</span></div>
+    <div class="legal">
+      <span>© 2026 Abdullah Rent-A-Car</span>
+      <span>Safe Ride | Comfort Journey | Your Trust</span>
+    </div>
   </div>
 </footer>
 
@@ -486,4 +709,5 @@ section[id]{scroll-margin-top:76px}
 })();
 </script>
 
-</body></html>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Abdullah Rent-A-Car",
+  "short_name": "Abdullah Rent",
+  "description": "Rent a car in Rajshahi. Sedan, SUV, Noah microbus available 24/7.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F6FA",
+  "theme_color": "#0B1626",
+  "icons": [
+    {
+      "src": "img/logo-on-light.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
